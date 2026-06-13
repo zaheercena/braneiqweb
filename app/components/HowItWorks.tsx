@@ -1,8 +1,8 @@
-import { Connect, Monitor, Zap } from 'lucide-react'
+import { Link2, Monitor, Zap } from 'lucide-react'
 
 const steps = [
   {
-    icon: Connect,
+    icon: Link2,
     number: '01',
     title: 'Connect sources',
     description: 'Link your social accounts, news feeds, and review platforms in minutes.'
