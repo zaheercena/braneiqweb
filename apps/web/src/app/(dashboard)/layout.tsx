@@ -1,12 +1,10 @@
 export const dynamic = 'force-dynamic';
 
-import { DashboardAuthGate } from '../../components/DashboardAuthGate';
 import { DashboardHeader } from '../../components/DashboardHeader';
 import { DashboardNav } from '../../components/DashboardNav';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
-    <DashboardAuthGate>
     <div className="flex min-h-screen">
       <aside className="fixed inset-y-0 left-0 z-50 w-64 border-r border-slate-800 bg-slate-900">
         <div className="flex h-16 items-center gap-2 border-b border-slate-800 px-6">
@@ -26,6 +24,5 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <main className="flex-1 p-8">{children}</main>
       </div>
     </div>
-    </DashboardAuthGate>
   );
 }
