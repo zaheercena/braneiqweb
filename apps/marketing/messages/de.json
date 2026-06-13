@@ -32,13 +32,21 @@
     "language": "Sprache",
     "solutions": "Lösungen",
     "industries": "Branchen",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "solutionsMenu": {
+      "label": "Lösungen",
+      "listen": "BraneIQ Listen",
+      "moderator": "BraneIQ Moderator",
+      "overview": "Plattform-Funktionen"
+    }
   },
   "footer": {
     "tagline": "Social Listening und Markenintelligenz für moderne Kommunikations- und Marketing-Teams.",
     "product": "Produkt",
     "platform": "Plattform",
     "solutions": "Lösungen",
+    "listen": "BraneIQ Listen",
+    "moderator": "BraneIQ Moderator",
     "industries": "Branchen",
     "demo": "Demo anfordern",
     "resources": "Ressourcen",
@@ -82,6 +90,18 @@
       "eyebrow": "Lösungen",
       "title": "Eine Plattform für Listening, Analyse und Handlung",
       "subtitle": "BraneIQ vereint Monitoring, Sentiment und Workflows in einer Plattform — speziell entwickelt für Teams, die Geschwindigkeit und Klarheit brauchen.",
+      "products": {
+        "listen": {
+          "name": "BraneIQ Listen",
+          "body": "Social Listening und Markenintelligenz auf insights.braneiq.com — Mentions überwachen, Sentiment verfolgen und Insights kanalübergreifend nutzen.",
+          "cta": "insights.braneiq.com öffnen"
+        },
+        "moderator": {
+          "name": "BraneIQ Moderator",
+          "body": "KI-gestützte Kommentar-Moderation auf moderator.braneiq.com — Facebook- und Instagram-Ads und organische Posts vor Spam und Missbrauch schützen.",
+          "cta": "moderator.braneiq.com öffnen"
+        }
+      },
       "listening": {
         "title": "Social Listening",
         "body": "Verfolgen Sie Marken, Keywords und Wettbewerber über Social-Kanäle hinweg mit flexiblen Abfragen und Echtzeit-Feeds.",

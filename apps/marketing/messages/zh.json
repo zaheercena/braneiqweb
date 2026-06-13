@@ -32,13 +32,21 @@
     "language": "语言",
     "solutions": "解决方案",
     "industries": "行业",
-    "faq": "常见问题"
+    "faq": "常见问题",
+    "solutionsMenu": {
+      "label": "解决方案",
+      "listen": "BraneIQ Listen",
+      "moderator": "BraneIQ Moderator",
+      "overview": "平台功能"
+    }
   },
   "footer": {
     "tagline": "为现代传播与营销团队打造的社交聆听与品牌智能平台。",
     "product": "产品",
     "platform": "平台",
     "solutions": "解决方案",
+    "listen": "BraneIQ Listen",
+    "moderator": "BraneIQ Moderator",
     "industries": "行业",
     "demo": "申请演示",
     "resources": "资源",
@@ -82,6 +90,18 @@
       "eyebrow": "解决方案",
       "title": "聆听、分析与行动的一体化平台",
       "subtitle": "BraneIQ 将监控、情感分析与工作流融为一体 — 专为需要速度与清晰度的团队打造。",
+      "products": {
+        "listen": {
+          "name": "BraneIQ Listen",
+          "body": "insights.braneiq.com 上的社交聆听与品牌智能 — 跨渠道监控提及、追踪情感并基于洞察采取行动。",
+          "cta": "打开 insights.braneiq.com"
+        },
+        "moderator": {
+          "name": "BraneIQ Moderator",
+          "body": "moderator.braneiq.com 上的 AI 评论审核 — 保护 Facebook 和 Instagram 广告及自然帖子免受垃圾信息和滥用。",
+          "cta": "打开 moderator.braneiq.com"
+        }
+      },
       "listening": {
         "title": "社交聆听",
         "body": "通过灵活的查询和实时信息流，跨社交渠道追踪品牌、关键词和竞争对手。",

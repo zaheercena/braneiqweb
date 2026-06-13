@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { getAppUrl } from '@/lib/env';
+import { PRODUCT_URLS } from '@/lib/products';
 
 export async function SiteFooter() {
   const t = await getTranslations('footer');
@@ -22,6 +23,16 @@ export async function SiteFooter() {
             {t('product')}
           </p>
           <ul className="mt-4 space-y-2 text-sm">
+            <li>
+              <a href={PRODUCT_URLS.listen} className="hover:text-white" target="_blank" rel="noopener noreferrer">
+                {t('listen')}
+              </a>
+            </li>
+            <li>
+              <a href={PRODUCT_URLS.moderator} className="hover:text-white" target="_blank" rel="noopener noreferrer">
+                {t('moderator')}
+              </a>
+            </li>
             <li>
               <Link href="/#solutions" className="hover:text-white">
                 {t('solutions')}

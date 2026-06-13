@@ -32,13 +32,21 @@
     "language": "Language",
     "solutions": "Solutions",
     "industries": "Industries",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "solutionsMenu": {
+      "label": "Solutions",
+      "listen": "BraneIQ Listen",
+      "moderator": "BraneIQ Moderator",
+      "overview": "Platform capabilities"
+    }
   },
   "footer": {
     "tagline": "Social listening and brand intelligence for modern comms and marketing teams.",
     "product": "Product",
     "platform": "Platform",
     "solutions": "Solutions",
+    "listen": "BraneIQ Listen",
+    "moderator": "BraneIQ Moderator",
     "industries": "Industries",
     "demo": "Request demo",
     "resources": "Resources",
@@ -82,6 +90,18 @@
       "eyebrow": "Solutions",
       "title": "One platform for listening, analysis, and action",
       "subtitle": "BraneIQ unifies monitoring, sentiment, and workflows in one platform — purpose-built for teams that need speed and clarity.",
+      "products": {
+        "listen": {
+          "name": "BraneIQ Listen",
+          "body": "Social listening and brand intelligence on insights.braneiq.com — monitor mentions, track sentiment, and act on insights across channels.",
+          "cta": "Open insights.braneiq.com"
+        },
+        "moderator": {
+          "name": "BraneIQ Moderator",
+          "body": "AI-powered comment moderation on moderator.braneiq.com — protect Facebook and Instagram ads and organic posts from spam and abuse.",
+          "cta": "Open moderator.braneiq.com"
+        }
+      },
       "listening": {
         "title": "Social listening",
         "body": "Track brands, keywords, and competitors across social channels with flexible queries and real-time feeds.",

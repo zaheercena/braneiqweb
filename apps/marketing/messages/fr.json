@@ -32,13 +32,21 @@
     "language": "Langue",
     "solutions": "Solutions",
     "industries": "Secteurs",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "solutionsMenu": {
+      "label": "Solutions",
+      "listen": "BraneIQ Listen",
+      "moderator": "BraneIQ Moderator",
+      "overview": "Fonctionnalités de la plateforme"
+    }
   },
   "footer": {
     "tagline": "Social listening et intelligence de marque pour les équipes comms et marketing modernes.",
     "product": "Produit",
     "platform": "Plateforme",
     "solutions": "Solutions",
+    "listen": "BraneIQ Listen",
+    "moderator": "BraneIQ Moderator",
     "industries": "Secteurs",
     "demo": "Demander une démo",
     "resources": "Ressources",
@@ -82,6 +90,18 @@
       "eyebrow": "Solutions",
       "title": "Une plateforme pour l'écoute, l'analyse et l'action",
       "subtitle": "BraneIQ unifie veille, sentiment et workflows sur une seule plateforme — conçu pour les équipes qui ont besoin de rapidité et de clarté.",
+      "products": {
+        "listen": {
+          "name": "BraneIQ Listen",
+          "body": "Social listening et intelligence de marque sur insights.braneiq.com — surveillez les mentions, le sentiment et agissez sur les insights multi-canaux.",
+          "cta": "Ouvrir insights.braneiq.com"
+        },
+        "moderator": {
+          "name": "BraneIQ Moderator",
+          "body": "Modération de commentaires par IA sur moderator.braneiq.com — protégez les publicités et publications Facebook et Instagram contre le spam et les abus.",
+          "cta": "Ouvrir moderator.braneiq.com"
+        }
+      },
       "listening": {
         "title": "Social listening",
         "body": "Suivez les marques, mots-clés et concurrents sur les réseaux sociaux avec des requêtes flexibles et des flux en temps réel.",

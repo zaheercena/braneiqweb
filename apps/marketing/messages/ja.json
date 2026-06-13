@@ -32,13 +32,21 @@
     "language": "言語",
     "solutions": "ソリューション",
     "industries": "業界",
-    "faq": "よくある質問"
+    "faq": "よくある質問",
+    "solutionsMenu": {
+      "label": "ソリューション",
+      "listen": "BraneIQ Listen",
+      "moderator": "BraneIQ Moderator",
+      "overview": "プラットフォーム機能"
+    }
   },
   "footer": {
     "tagline": "現代のコミュニケーション・マーケティングチーム向けソーシャルリスニングとブランドインテリジェンス。",
     "product": "プロダクト",
     "platform": "プラットフォーム",
     "solutions": "ソリューション",
+    "listen": "BraneIQ Listen",
+    "moderator": "BraneIQ Moderator",
     "industries": "業界",
     "demo": "デモを申し込む",
     "resources": "リソース",
@@ -82,6 +90,18 @@
       "eyebrow": "ソリューション",
       "title": "リスニング、分析、アクションを一つのプラットフォームで",
       "subtitle": "BraneIQはモニタリング、センチメント、ワークフローを1つのプラットフォームに統合 — スピードと明確さを必要とするチームのために設計されています。",
+      "products": {
+        "listen": {
+          "name": "BraneIQ Listen",
+          "body": "insights.braneiq.com のソーシャルリスニングとブランドインテリジェンス — 言及の監視、センチメントの追跡、チャネル横断のインサイト活用。",
+          "cta": "insights.braneiq.com を開く"
+        },
+        "moderator": {
+          "name": "BraneIQ Moderator",
+          "body": "moderator.braneiq.com のAIコメントモデレーション — FacebookとInstagramの広告・投稿をスパムや悪用から保護。",
+          "cta": "moderator.braneiq.com を開く"
+        }
+      },
       "listening": {
         "title": "ソーシャルリスニング",
         "body": "柔軟なクエリとリアルタイムフィードで、ソーシャルチャネル全体のブランド、キーワード、競合を追跡。",

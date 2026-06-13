@@ -5,6 +5,7 @@ import { Link, usePathname, useRouter } from '@/i18n/routing';
 import { locales, type Locale } from '@/i18n/routing';
 import { getAppUrl } from '@/lib/env';
 import clsx from 'clsx';
+import { SolutionsNav } from '@/components/SolutionsNav';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
@@ -30,7 +31,6 @@ export function SiteHeader() {
   ];
 
   const sectionLinks = [
-    { hash: 'solutions', label: t('solutions') },
     { hash: 'industries', label: t('industries') },
     { hash: 'faq', label: t('faq') },
   ];
@@ -60,6 +60,7 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
+          <SolutionsNav />
           {sectionLinks.map(({ hash, label }) => (
             <Link
               key={hash}
@@ -103,6 +104,7 @@ export function SiteHeader() {
       {open && (
         <div className="border-t border-slate-200 bg-white px-6 py-4 lg:hidden">
           <nav className="flex flex-col gap-4">
+            <SolutionsNav variant="mobile" onNavigate={() => setOpen(false)} />
             {sectionLinks.map(({ hash, label }) => (
               <Link
                 key={hash}
