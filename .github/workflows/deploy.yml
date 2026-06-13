@@ -1,0 +1,91 @@
+name: Deploy to AWS EC2
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build application
+        run: npm run build
+
+      - name: Create deployment archive
+        run: |
+          tar -czf deploy.tar.gz \
+            .next/standalone \
+            .next/static \
+            public \
+            package.json \
+            next.config.js
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/ec2_key
+          chmod 600 ~/.ssh/ec2_key
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to EC2
+        run: |
+          # Copy deployment archive to EC2
+          scp -i ~/.ssh/ec2_key deploy.tar.gz ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
+          
+          # Execute deployment commands on EC2
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+            set -e
+            
+            # Create app directory
+            sudo mkdir -p /var/www/braneiq-web
+            sudo chown ubuntu:ubuntu /var/www/braneiq-web
+            
+            # Backup current deployment
+            if [ -d /var/www/braneiq-web/.next ]; then
+              sudo mv /var/www/braneiq-web /var/www/braneiq-web-backup-$(date +%Y%m%d-%H%M%S) || true
+            fi
+            
+            # Extract new deployment
+            sudo mkdir -p /var/www/braneiq-web
+            sudo tar -xzf /tmp/deploy.tar.gz -C /var/www/braneiq-web
+            sudo chown -R ubuntu:ubuntu /var/www/braneiq-web
+            
+            # Install production dependencies
+            cd /var/www/braneiq-web
+            npm install --production
+            
+            # Setup environment
+            echo "NODE_ENV=production" | sudo tee /var/www/braneiq-web/.env
+            echo "PORT=3000" | sudo tee -a /var/www/braneiq-web/.env
+            
+            # Restart or start with PM2
+            if pm2 list | grep -q "braneiq-web"; then
+              pm2 restart braneiq-web
+            else
+              pm2 start /var/www/braneiq-web/.next/standalone/server.js --name braneiq-web --cwd /var/www/braneiq-web
+            fi
+            
+            pm2 save
+            
+            # Cleanup
+            rm -f /tmp/deploy.tar.gz
+            
+            echo "Deployment completed!"
+          EOF
+
+      - name: Cleanup
+        if: always()
+        run: rm -f deploy.tar.gz ~/.ssh/ec2_key
