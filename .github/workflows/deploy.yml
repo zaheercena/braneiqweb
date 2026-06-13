@@ -33,7 +33,6 @@ jobs:
         run: pnpm --filter @braneiq/web build
         env:
           NODE_ENV: production
-          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
       - name: Create deployment archive
         run: |
@@ -84,7 +83,6 @@ jobs:
             # Setup environment file
             echo "NODE_ENV=production" | sudo tee /var/www/braneiq-web/.env
             echo "PORT=3000" | sudo tee -a /var/www/braneiq-web/.env
-            echo "NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}" | sudo tee -a /var/www/braneiq-web/.env
             
             # Restart or start the application with PM2
             if pm2 list | grep -q "braneiq-web"; then
