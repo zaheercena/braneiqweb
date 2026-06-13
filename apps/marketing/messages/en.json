@@ -1,0 +1,380 @@
+{
+  "metadata": {
+    "siteName": "BraneIQ",
+    "defaultTitle": "BraneIQ | Social Listening & Brand Intelligence",
+    "defaultDescription": "Monitor brand mentions, analyze sentiment, and act on social insights. BraneIQ is the social listening platform for comms, PR, and marketing teams.",
+    "keywords": "social listening, brand monitoring, sentiment analysis, media intelligence, reputation management, social media analytics, BraneIQ",
+    "home": {
+      "title": "Social Listening & Brand Intelligence Platform",
+      "description": "Turn social noise into brand intelligence. Monitor mentions, track sentiment, and respond faster with BraneIQ — built for comms and marketing teams."
+    },
+    "platform": {
+      "title": "Platform Overview",
+      "description": "Explore BraneIQ's unified social listening platform: real-time monitoring, sentiment analytics, smart alerts, and enterprise-grade multi-tenant workspaces."
+    },
+    "demo": {
+      "title": "Request a Demo",
+      "description": "Schedule a personalized BraneIQ demo. See how comms and marketing teams monitor brands, analyze sentiment, and manage reputation at scale."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "BraneIQ privacy policy — how we collect, use, and protect your information when you use our website and social listening platform."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "description": "BraneIQ terms of service — the rules and conditions for using our website and social listening platform."
+    }
+  },
+  "nav": {
+    "platform": "Platform",
+    "demo": "Request demo",
+    "login": "Log in",
+    "language": "Language",
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "faq": "FAQ"
+  },
+  "footer": {
+    "tagline": "Social listening and brand intelligence for modern comms and marketing teams.",
+    "product": "Product",
+    "platform": "Platform",
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "demo": "Request demo",
+    "resources": "Resources",
+    "faq": "FAQ",
+    "legal": "Legal",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "llmsTxt": "AI / LLM documentation",
+    "contact": "Contact",
+    "login": "Log in to app",
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Social listening platform",
+      "title": "Turn social noise into brand intelligence",
+      "subtitle": "Monitor mentions, track sentiment, and act on insights across social channels — in one unified workspace built for comms and marketing teams.",
+      "ctaPrimary": "Request a demo",
+      "ctaSecondary": "Explore platform",
+      "preview": {
+        "mentions": "Mentions today",
+        "vsLastWeek": "vs last week",
+        "sentiment": "Sentiment",
+        "positive": "Positive",
+        "alerts": "Active alerts",
+        "active": "Needs review",
+        "sample1": "Brand mention spike on X — 340 posts/hr",
+        "sample2": "Competitor campaign trending in DE"
+      }
+    },
+    "trustedBy": {
+      "title": "Trusted by comms and marketing teams worldwide"
+    },
+    "stats": {
+      "sources": { "value": "10+", "label": "Data sources" },
+      "languages": { "value": "5", "label": "Supported locales" },
+      "latency": { "value": "<1 min", "label": "Alert latency" },
+      "uptime": { "value": "99.9%", "label": "Platform uptime" }
+    },
+    "solutions": {
+      "eyebrow": "Solutions",
+      "title": "One platform for listening, analysis, and action",
+      "subtitle": "BraneIQ unifies monitoring, sentiment, and workflows in one platform — purpose-built for teams that need speed and clarity.",
+      "listening": {
+        "title": "Social listening",
+        "body": "Track brands, keywords, and competitors across social channels with flexible queries and real-time feeds.",
+        "points": {
+          "1": "Keyword and boolean query builder",
+          "2": "Multi-brand and multi-client workspaces",
+          "3": "Unified timeline across sources"
+        }
+      },
+      "sentiment": {
+        "title": "Sentiment & analytics",
+        "body": "Understand tone, volume, and share of voice with dashboards designed for analysts and executives.",
+        "points": {
+          "1": "AI-powered sentiment scoring",
+          "2": "Trend and spike detection",
+          "3": "Export-ready executive reports"
+        }
+      },
+      "crisis": {
+        "title": "Crisis & reputation",
+        "body": "Catch reputation risks early with smart alerts, escalation paths, and team workflows.",
+        "points": {
+          "1": "Threshold and anomaly alerts",
+          "2": "Assign, comment, and resolve cases",
+          "3": "Audit trail for compliance teams"
+        }
+      }
+    },
+    "howItWorks": {
+      "eyebrow": "How it works",
+      "title": "From setup to insight in days, not months",
+      "subtitle": "A streamlined onboarding flow inspired by the best enterprise social suites.",
+      "connect": {
+        "title": "Connect sources",
+        "body": "Link social accounts and data sources. Configure brands, keywords, and competitor lists per workspace."
+      },
+      "monitor": {
+        "title": "Monitor & enrich",
+        "body": "BraneIQ ingests mentions, deduplicates noise, scores sentiment, and surfaces what matters in real time."
+      },
+      "act": {
+        "title": "Act & report",
+        "body": "Route alerts to the right people, collaborate on cases, and share reports with stakeholders."
+      }
+    },
+    "features": {
+      "title": "Everything you need to listen and respond",
+      "subtitle": "From keyword monitoring to executive-ready reports, BraneIQ helps teams stay ahead of the conversation.",
+      "monitoring": {
+        "title": "Real-time monitoring",
+        "body": "Track brand mentions, keywords, and competitors across social platforms with configurable queries and filters."
+      },
+      "analytics": {
+        "title": "Sentiment & analytics",
+        "body": "Understand tone, volume trends, and share of voice with dashboards designed for quick decisions."
+      },
+      "alerts": {
+        "title": "Smart alerts",
+        "body": "Get notified when conversations spike, sentiment shifts, or high-impact mentions need immediate attention."
+      },
+      "teams": {
+        "title": "Built for teams",
+        "body": "Multi-client workspaces, role-based access, and workflows that scale from boutique agencies to enterprise."
+      }
+    },
+    "industries": {
+      "eyebrow": "Industries",
+      "title": "Built for teams across every sector",
+      "subtitle": "Whether you run an agency, a global brand, or a lean comms team — BraneIQ adapts to your workflow.",
+      "agencies": {
+        "title": "Agencies & consultancies",
+        "body": "Manage multiple clients with isolated workspaces, white-label reports, and role-based team access.",
+        "stat": "40%",
+        "statLabel": "Faster client reporting (avg. pilot teams)"
+      },
+      "enterprise": {
+        "title": "Enterprise comms & PR",
+        "body": "Monitor global brand health, track executive visibility, and coordinate crisis response across regions.",
+        "stat": "90%",
+        "statLabel": "Reduction in manual monitoring time"
+      },
+      "retail": {
+        "title": "Retail & consumer brands",
+        "body": "Track product launches, UGC, and competitor campaigns to protect reputation and drive engagement.",
+        "stat": "3×",
+        "statLabel": "Faster issue detection vs. manual tracking"
+      },
+      "sports": {
+        "title": "Sports & entertainment",
+        "body": "Capture fan sentiment, sponsor visibility, and real-time buzz during events and match days.",
+        "stat": "15%",
+        "statLabel": "Increase in engagement insights coverage"
+      }
+    },
+    "testimonials": {
+      "eyebrow": "Customer stories",
+      "title": "Teams that listen smarter",
+      "subtitle": "See how comms and marketing teams use BraneIQ to move faster and report with confidence.",
+      "one": {
+        "quote": "BraneIQ cut our daily monitoring routine from hours to minutes. Our clients get insights the same day, not the next week.",
+        "metric": "80%",
+        "metricLabel": "Less time on manual reporting",
+        "name": "Sarah Chen",
+        "role": "Director of Insights, Meridian Comms"
+      },
+      "two": {
+        "quote": "During a product launch we caught a sentiment shift in under an hour. That early warning saved us from a much bigger crisis.",
+        "metric": "<1 hr",
+        "metricLabel": "Alert latency on spike detection",
+        "name": "Marco Alvarez",
+        "role": "Head of PR, Northline Group"
+      },
+      "three": {
+        "quote": "Multi-client workspaces were the deciding factor. We onboard new accounts in days without rebuilding our stack.",
+        "metric": "5→50",
+        "metricLabel": "Clients managed on one platform",
+        "name": "Priya Sharma",
+        "role": "Founder, Atlas Agency"
+      }
+    },
+    "integrations": {
+      "eyebrow": "Data sources",
+      "title": "Connect the channels that matter",
+      "subtitle": "Ingest mentions from social platforms and news sources — with more connectors shipping regularly.",
+      "more": "+ more sources coming"
+    },
+    "trust": {
+      "title": "Enterprise-ready from day one",
+      "security": {
+        "title": "Role-based access & audit logs",
+        "body": "Control who sees what across workspaces with granular permissions and activity trails."
+      },
+      "multiTenant": {
+        "title": "Multi-tenant isolation",
+        "body": "Agency and enterprise clients stay fully separated — data, users, and configs per tenant."
+      },
+      "realtime": {
+        "title": "Real-time pipeline",
+        "body": "Built on a modern event-driven architecture for sub-minute ingestion and alert delivery."
+      }
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Frequently asked questions",
+      "subtitle": "Quick answers about BraneIQ, our data sources, and how to get started.",
+      "items": {
+        "what": {
+          "q": "What is BraneIQ?",
+          "a": "BraneIQ is a social listening and brand intelligence platform. It helps comms, PR, and marketing teams monitor mentions, analyze sentiment, and respond to reputation risks across social channels."
+        },
+        "sources": {
+          "q": "Which data sources do you support?",
+          "a": "BraneIQ currently supports X (Twitter), Reddit, Facebook, YouTube, and news/RSS feeds — with additional connectors on our roadmap. Contact us for specific source requirements."
+        },
+        "teams": {
+          "q": "Can agencies manage multiple clients?",
+          "a": "Yes. BraneIQ is built for agencies with multi-client workspaces, role-based access, and isolated data per tenant. Each client gets their own brands, keywords, and reports."
+        },
+        "pricing": {
+          "q": "How does pricing work?",
+          "a": "We offer flexible plans based on workspace size, data volume, and team seats. Request a demo and we'll recommend a plan tailored to your needs."
+        },
+        "demo": {
+          "q": "How do I get started?",
+          "a": "Request a demo and our team will walk you through the platform, help configure your first brands and keywords, and discuss onboarding timelines."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to see BraneIQ in action?",
+      "subtitle": "Book a personalized demo and learn how teams use BraneIQ to protect and grow their brands.",
+      "button": "Schedule your demo"
+    }
+  },
+  "platform": {
+    "eyebrow": "BraneIQ platform",
+    "title": "One platform for listening, analysis, and action",
+    "subtitle": "BraneIQ combines ingestion, enrichment, and reporting so your team can move from raw social data to confident decisions.",
+    "pillars": {
+      "monitoring": {
+        "title": "Unified monitoring",
+        "body": "Collect posts, comments, and engagement signals from connected social sources into a single searchable timeline."
+      },
+      "analytics": {
+        "title": "Insightful analytics",
+        "body": "Measure sentiment, trending topics, and campaign impact with flexible views for analysts and executives."
+      },
+      "security": {
+        "title": "Enterprise security",
+        "body": "Role-based access, audit trails, and tenant isolation keep client data secure across agencies and brands."
+      },
+      "automation": {
+        "title": "Workflow automation",
+        "body": "Route alerts, assign cases, and export reports so your team responds faster without manual busywork."
+      }
+    }
+  },
+  "demo": {
+    "title": "Request a demo",
+    "subtitle": "Tell us about your team and we'll reach out to schedule a walkthrough of BraneIQ.",
+    "success": "Thanks — we've received your request and will be in touch shortly.",
+    "form": {
+      "name": "Full name",
+      "email": "Work email",
+      "company": "Company",
+      "message": "What would you like to monitor?",
+      "submit": "Submit request"
+    }
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "updated": "Last updated: June 2026",
+    "intro": "BraneIQ provides social listening and brand intelligence software. This policy describes how we collect, use, and protect information when you visit our website or use our services.",
+    "sections": {
+      "collection": {
+        "title": "Information we collect",
+        "body": "We collect information you provide directly (such as name, email, and company when requesting a demo), usage data from our platform, and publicly available social content processed on behalf of our customers under their instructions."
+      },
+      "use": {
+        "title": "How we use information",
+        "body": "We use information to provide and improve our services, respond to inquiries, secure our platform, and comply with legal obligations. We do not sell personal information."
+      },
+      "sharing": {
+        "title": "Sharing of information",
+        "body": "We share information with service providers who assist in operating our platform, when required by law, or with your consent. Customer data is isolated per tenant."
+      },
+      "retention": {
+        "title": "Data retention",
+        "body": "We retain information for as long as needed to provide services and meet legal requirements. Customers may request deletion subject to contractual and regulatory constraints."
+      },
+      "rights": {
+        "title": "Your rights",
+        "body": "Depending on your location, you may have rights to access, correct, delete, or restrict processing of your personal information. Contact us to exercise these rights."
+      },
+      "contact": {
+        "title": "Contact us",
+        "body": "For privacy questions, contact privacy@braneiq.com or Cozmot Inc, the operator of BraneIQ."
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of service",
+    "updated": "Last updated: June 2026",
+    "intro": "These Terms of Service (\"Terms\") govern your access to and use of the BraneIQ website, platform, and related services (collectively, the \"Services\") operated by Cozmot Inc (\"BraneIQ,\" \"we,\" \"us,\" or \"our\"). By accessing or using the Services, you agree to these Terms.",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance of terms",
+        "body": "By visiting braneiq.com, creating an account, or using our platform, you confirm that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree, do not use the Services. If you use the Services on behalf of an organization, you represent that you have authority to bind that organization."
+      },
+      "service": {
+        "title": "Description of service",
+        "body": "BraneIQ provides social listening, brand monitoring, sentiment analysis, alerts, and related analytics tools for communications, marketing, and agency teams. Features, integrations, and availability may change over time. We may update, suspend, or discontinue parts of the Services with reasonable notice where practicable."
+      },
+      "accounts": {
+        "title": "Accounts and security",
+        "body": "You must provide accurate registration information and keep your credentials confidential. You are responsible for all activity under your account. Notify us promptly at hello@braneiq.com of any unauthorized access. We may suspend or terminate accounts that violate these Terms or pose a security risk."
+      },
+      "acceptableUse": {
+        "title": "Acceptable use",
+        "body": "You agree not to misuse the Services. Prohibited conduct includes: violating applicable laws or third-party rights; scraping or accessing the Services through unauthorized automated means; attempting to probe, scan, or test vulnerabilities; interfering with platform operation; uploading malware; harvesting personal data without a lawful basis; or using the Services to monitor individuals in violation of platform terms or privacy laws. You are responsible for ensuring your use of social data complies with applicable platform policies and regulations."
+      },
+      "subscription": {
+        "title": "Subscriptions and fees",
+        "body": "Paid plans, billing cycles, and pricing are set out in your order form or subscription agreement. Fees are non-refundable except where required by law or expressly stated in writing. Failure to pay may result in suspension or termination of access. Trial or beta features may be offered as-is with no service-level commitments."
+      },
+      "intellectualProperty": {
+        "title": "Intellectual property",
+        "body": "BraneIQ and its licensors retain all rights in the Services, software, branding, documentation, and related materials. You receive a limited, non-exclusive, non-transferable right to use the Services during your subscription term for internal business purposes. You may not copy, modify, reverse engineer, resell, or create derivative works except as permitted by law or written agreement."
+      },
+      "data": {
+        "title": "Customer data",
+        "body": "You retain ownership of data you submit to the Services. You grant BraneIQ a license to host, process, and display that data solely to provide and improve the Services. Public social content ingested through connectors is processed on your instructions. Our handling of personal information is described in our Privacy Policy. You are responsible for obtaining any consents or legal bases required for your monitoring activities."
+      },
+      "disclaimers": {
+        "title": "Disclaimers",
+        "body": "The Services are provided on an \"as is\" and \"as available\" basis. We do not guarantee uninterrupted or error-free operation, complete accuracy of sentiment or analytics outputs, or that the Services will meet your specific requirements. Social and third-party data sources are outside our control and may change without notice."
+      },
+      "liability": {
+        "title": "Limitation of liability",
+        "body": "To the maximum extent permitted by law, BraneIQ and its affiliates will not be liable for indirect, incidental, special, consequential, or punitive damages, or for loss of profits, data, goodwill, or business opportunities. Our total liability arising from or related to the Services will not exceed the fees paid by you to BraneIQ in the twelve (12) months preceding the claim, or one hundred U.S. dollars if no fees were paid."
+      },
+      "termination": {
+        "title": "Termination",
+        "body": "You may stop using the Services at any time. We may suspend or terminate access for breach of these Terms, non-payment, legal requirements, or extended inactivity. Upon termination, your right to use the Services ends. Provisions that by nature should survive (including intellectual property, disclaimers, limitation of liability, and governing law) will survive termination."
+      },
+      "governingLaw": {
+        "title": "Governing law",
+        "body": "These Terms are governed by the laws of the State of Delaware, United States, without regard to conflict-of-law principles. Disputes will be resolved in the state or federal courts located in Delaware, unless applicable law requires otherwise. If any provision is held unenforceable, the remaining provisions remain in effect."
+      },
+      "contact": {
+        "title": "Contact us",
+        "body": "Questions about these Terms may be sent to hello@braneiq.com. BraneIQ is operated by Cozmot Inc."
+      }
+    }
+  }
+}

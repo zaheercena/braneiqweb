@@ -1,0 +1,17 @@
+# Railway config for @braneiq/marketing (public website).
+#
+# Railway UI → @braneiq/marketing → Settings:
+#   Config file path: apps/marketing/railway.toml
+#   Root Directory: leave empty (repo root, NOT apps/marketing)
+#   Start Command: leave empty
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "apps/marketing/Dockerfile"
+dockerTarget = "runner"
+
+[deploy]
+startCommand = "node apps/marketing/server.js"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"

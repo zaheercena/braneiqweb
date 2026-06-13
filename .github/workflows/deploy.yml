@@ -8,29 +8,40 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.14.2
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install --frozen-lockfile --filter @braneiq/marketing...
 
       - name: Build application
-        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://braneiq.com
+          NEXT_PUBLIC_APP_URL: https://app.braneiq.com
+          NEXT_PUBLIC_GTM_ID: GTM-5GWN244W
+        run: pnpm --filter @braneiq/marketing build
 
       - name: Create deployment archive
         run: |
-          tar -czf deploy.tar.gz \
-            .next/standalone \
-            .next/static \
-            package.json \
-            next.config.js
+          STANDALONE=apps/marketing/.next/standalone
+          STATIC=apps/marketing/.next/static
+          mkdir -p "$STANDALONE/apps/marketing/.next"
+          cp -r "$STATIC" "$STANDALONE/apps/marketing/.next/static"
+          cp scripts/ec2-post-deploy.sh "$STANDALONE/ec2-post-deploy.sh"
+          tar -czf deploy.tar.gz -C "$STANDALONE" .
 
       - name: Setup SSH
         run: |
@@ -41,47 +52,23 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          # Copy deployment archive to EC2
           scp -i ~/.ssh/ec2_key deploy.tar.gz ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
-          
-          # Execute deployment commands on EC2
+
           ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
             set -e
-            
-            # Create app directory
-            sudo mkdir -p /var/www/braneiq-web
-            sudo chown ubuntu:ubuntu /var/www/braneiq-web
-            
-            # Backup current deployment
-            if [ -d /var/www/braneiq-web/.next ]; then
-              sudo mv /var/www/braneiq-web /var/www/braneiq-web-backup-$(date +%Y%m%d-%H%M%S) || true
+
+            APP_DIR=/var/www/braneiq-web
+            BACKUP_DIR=/var/www/braneiq-web-backup-$(date +%Y%m%d-%H%M%S)
+
+            if [ -d "$APP_DIR" ]; then
+              sudo mv "$APP_DIR" "$BACKUP_DIR"
             fi
-            
-            # Extract new deployment
-            sudo mkdir -p /var/www/braneiq-web
-            sudo tar -xzf /tmp/deploy.tar.gz -C /var/www/braneiq-web
-            sudo chown -R ubuntu:ubuntu /var/www/braneiq-web
-            
-            # Install production dependencies
-            cd /var/www/braneiq-web
-            npm install --production
-            
-            # Setup environment
-            echo "NODE_ENV=production" | sudo tee /var/www/braneiq-web/.env
-            echo "PORT=3000" | sudo tee -a /var/www/braneiq-web/.env
-            
-            # Restart or start with PM2
-            if pm2 list | grep -q "braneiq-web"; then
-              pm2 restart braneiq-web
-            else
-              pm2 start /var/www/braneiq-web/.next/standalone/server.js --name braneiq-web --cwd /var/www/braneiq-web
-            fi
-            
-            pm2 save
-            
-            # Cleanup
+
+            sudo mkdir -p "$APP_DIR"
+            sudo tar -xzf /tmp/deploy.tar.gz -C "$APP_DIR"
+            sudo chown -R ubuntu:ubuntu "$APP_DIR"
+            bash "$APP_DIR/ec2-post-deploy.sh"
             rm -f /tmp/deploy.tar.gz
-            
             echo "Deployment completed!"
           EOF
 

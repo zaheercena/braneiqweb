@@ -8,6 +8,15 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY apps/marketing/package.json ./apps/marketing/
 RUN pnpm install --frozen-lockfile --filter @braneiq/marketing...
 
+FROM base AS dev
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/apps/marketing/node_modules ./apps/marketing/node_modules
+COPY . .
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3001
+EXPOSE 3001
+CMD ["pnpm", "--filter", "@braneiq/marketing", "dev"]
+
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY --from=deps /app/apps/marketing/node_modules ./apps/marketing/node_modules
@@ -27,7 +36,6 @@ FROM base AS runner
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV HOSTNAME=0.0.0.0
-ENV PORT=3000
 ENV NEXT_PUBLIC_SITE_URL=https://braneiq.com
 ENV NEXT_PUBLIC_APP_URL=https://app.braneiq.com
 WORKDIR /app
@@ -36,6 +44,5 @@ COPY --from=builder /app/apps/marketing/public ./apps/marketing/public
 COPY --from=builder --chown=nextjs:nodejs /app/apps/marketing/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/apps/marketing/.next/static ./apps/marketing/.next/static
 USER nextjs
-EXPOSE 3000
 ENTRYPOINT ["node"]
 CMD ["apps/marketing/server.js"]
