@@ -29,7 +29,6 @@ jobs:
           tar -czf deploy.tar.gz \
             .next/standalone \
             .next/static \
-            public \
             package.json \
             next.config.js
 
