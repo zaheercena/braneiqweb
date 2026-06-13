@@ -59,12 +59,12 @@ jobs:
           scp -i ~/.ssh/ec2_key deploy.tar.gz ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
           
           # Execute deployment commands on EC2
-          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+          ssh -i ~/.ssh/ec2_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << EOF
             set -e
             
             # Create app directory if it doesn't exist
             sudo mkdir -p /var/www/braneiq-web
-            sudo chown ${{ secrets.EC2_USER }}:${{ secrets.EC2_USER }} /var/www/braneiq-web
+            sudo chown ubuntu:ubuntu /var/www/braneiq-web
             
             # Backup current deployment
             if [ -d /var/www/braneiq-web/apps ]; then
@@ -74,7 +74,7 @@ jobs:
             # Extract new deployment
             sudo mkdir -p /var/www/braneiq-web
             sudo tar -xzf /tmp/deploy.tar.gz -C /var/www/braneiq-web
-            sudo chown -R ${{ secrets.EC2_USER }}:${{ secrets.EC2_USER }} /var/www/braneiq-web
+            sudo chown -R ubuntu:ubuntu /var/www/braneiq-web
             
             # Install production dependencies
             cd /var/www/braneiq-web
@@ -88,7 +88,7 @@ jobs:
             if pm2 list | grep -q "braneiq-web"; then
               pm2 restart braneiq-web
             else
-              pm2 start /var/www/braneiq-web/apps/web/server.js --name braneiq-web --cwd /var/www/braneiq-web
+              pm2 start /var/www/braneiq-web/apps/web/.next/standalone/apps/web/server.js --name braneiq-web --cwd /var/www/braneiq-web/apps/web/.next/standalone
             fi
             
             # Save PM2 config
@@ -98,7 +98,7 @@ jobs:
             rm -f /tmp/deploy.tar.gz
             
             echo "Deployment completed successfully!"
-          EOF
+EOF
 
       - name: Cleanup
         if: always()
