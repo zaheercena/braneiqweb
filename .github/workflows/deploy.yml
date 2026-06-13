@@ -98,7 +98,7 @@ jobs:
             rm -f /tmp/deploy.tar.gz
             
             echo "Deployment completed successfully!"
-EOF
+          EOF
 
       - name: Cleanup
         if: always()
