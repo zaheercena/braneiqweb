@@ -38,8 +38,10 @@ jobs:
         run: |
           STANDALONE=apps/marketing/.next/standalone
           STATIC=apps/marketing/.next/static
+          PUBLIC=apps/marketing/public
           mkdir -p "$STANDALONE/apps/marketing/.next"
           cp -r "$STATIC" "$STANDALONE/apps/marketing/.next/static"
+          cp -r "$PUBLIC" "$STANDALONE/apps/marketing/public"
           cp scripts/ec2-post-deploy.sh "$STANDALONE/ec2-post-deploy.sh"
           tar -czf deploy.tar.gz -C "$STANDALONE" .
 
