@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import Image from 'next/image';
 import { getAppUrl } from '@/lib/env';
 import { PRODUCT_URLS } from '@/lib/products';
 
@@ -14,7 +13,7 @@ export async function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-4">
         <div className="md:col-span-1">
           <div className="flex items-center gap-2">
-            <Image src="/braneiq.png" alt="BraneIQ" width={36} height={36} className="object-contain brightness-0 invert" />
+            <img src="/braneiq.png" alt="BraneIQ" width={36} height={36} className="object-contain brightness-0 invert" />
             <p className="text-lg font-bold text-white">Brane<span className="text-indigo-400">IQ</span></p>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-slate-400">{t('tagline')}</p>
