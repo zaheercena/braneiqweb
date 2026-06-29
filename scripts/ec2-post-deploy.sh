@@ -45,13 +45,15 @@ sudo ln -sf /etc/nginx/sites-available/braneiq-web /etc/nginx/sites-enabled/bran
 sudo nginx -t
 sudo systemctl reload nginx
 
-sudo tee "$APP_DIR/.env" > /dev/null <<'ENV'
+sudo tee "$APP_DIR/.env" > /dev/null <<ENV
 NODE_ENV=production
 PORT=3000
 HOSTNAME=0.0.0.0
 NEXT_PUBLIC_SITE_URL=https://braneiq.com
 NEXT_PUBLIC_APP_URL=https://app.braneiq.com
 NEXT_PUBLIC_GTM_ID=GTM-5GWN244W
+SMTP_USER=${SMTP_USER}
+SMTP_PASS=${SMTP_PASS}
 ENV
 
 if pm2 list | grep -q "braneiq-web"; then
