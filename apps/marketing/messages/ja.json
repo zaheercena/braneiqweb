@@ -57,7 +57,8 @@
     "llmsTxt": "AI / LLM ドキュメント",
     "contact": "お問い合わせ",
     "login": "アプリにログイン",
-    "rights": "無断転載を禁じます。"
+    "rights": "無断転載を禁じます。",
+    "privacyShort": "プライバシーポリシー"
   },
   "home": {
     "hero": {
@@ -84,35 +85,89 @@
       "title": "世界中のコミュニケーション・マーケティングチームに信頼されています"
     },
     "stats": {
-      "posts": { "value": "2500万+", "label": "分析済み投稿" },
-      "sources": { "value": "100+", "label": "対応ソース" },
-      "uptime": { "value": "99.9%", "label": "プラットフォーム稼働率" },
-      "monitoring": { "value": "24/7", "label": "リアルタイム監視" }
+      "posts": {
+        "value": "2500万+",
+        "label": "分析済み投稿"
+      },
+      "sources": {
+        "value": "100+",
+        "label": "対応ソース"
+      },
+      "uptime": {
+        "value": "99.9%",
+        "label": "プラットフォーム稼働率"
+      },
+      "monitoring": {
+        "value": "24/7",
+        "label": "リアルタイム監視"
+      }
     },
     "valueProps": {
       "eyebrow": "BraneIQが選ばれる理由",
       "title": "レピュテーションを守る。市場を理解する。競合他社より先に動く。",
       "subtitle": "すべての機能は一つの目標に結びついています：チームが自信をもって意思決定できるインテリジェンスを提供すること。",
-      "crisis": { "title": "レピュテーションクライシスを早期検知", "body": "センチメントや言及量が変動した山にアラート。クライシスが主流メディアに達する数時間前に対応。" },
-      "spam": { "title": "スパムを顧客に見られる前に停止", "body": "AIが毒気あるコメント、スパム、競合他社の攻撃を広告や投稿から自動削除。" },
-      "competitors": { "title": "競合他社をリアルタイムで追跡", "body": "競合他社のキャンペーン、製品リリース、世論を監視し、機会を特定。" },
-      "campaigns": { "title": "キャンペーンパフォーマンスを計測", "body": "ブランド認知度、シェアオブボイス、センチメントを全チャネルで定量化。" },
-      "sentiment": { "title": "顧客センチメントを理解", "body": "ライクやシェアを超えて。顧客がブランド、製品、サービスについて本当に思っていることを把握。" },
-      "executive": { "title": "エグゼクティブのレピュテーションを監視", "body": "主要エグゼクティブの言及、センチメント、ナラティブを追跡し、リーダーシップのレピュテーションを守る。" }
+      "crisis": {
+        "title": "レピュテーションクライシスを早期検知",
+        "body": "センチメントや言及量が変動した山にアラート。クライシスが主流メディアに達する数時間前に対応。"
+      },
+      "spam": {
+        "title": "スパムを顧客に見られる前に停止",
+        "body": "AIが毒気あるコメント、スパム、競合他社の攻撃を広告や投稿から自動削除。"
+      },
+      "competitors": {
+        "title": "競合他社をリアルタイムで追跡",
+        "body": "競合他社のキャンペーン、製品リリース、世論を監視し、機会を特定。"
+      },
+      "campaigns": {
+        "title": "キャンペーンパフォーマンスを計測",
+        "body": "ブランド認知度、シェアオブボイス、センチメントを全チャネルで定量化。"
+      },
+      "sentiment": {
+        "title": "顧客センチメントを理解",
+        "body": "ライクやシェアを超えて。顧客がブランド、製品、サービスについて本当に思っていることを把握。"
+      },
+      "executive": {
+        "title": "エグゼクティブのレピュテーションを監視",
+        "body": "主要エグゼクティブの言及、センチメント、ナラティブを追跡し、リーダーシップのレピュテーションを守る。"
+      }
     },
     "solutions": {
       "eyebrow": "製品エコシステム",
       "title": "一つのプラットフォーム。八つの強力な製品。",
       "subtitle": "BraneIQは単一ツールではなく、あらゆるニーズに対応する専門製品を備えた完全なインテリジェンスプラットフォームです。",
       "products": {
-        "socialListening": { "name": "ソーシャルリスニング", "body": "リアルタイムで全主要ソーシャルプラットフォーム全体のブランド言及、キーワード、競合他社を監視。" },
-        "commentModerator": { "name": "コメントモデレーター", "body": "FacebookとInstagramからスパム、毒気あるコメント、競合他社の攻撃を自動削除。" },
-        "youtubeModeration": { "name": "YouTubeモデレーター", "body": "ブランドルールに基づくAIモデレーションでYouTubeチャンネルを有害コメントから保護。" },
-        "newsMonitoring": { "name": "ニュースインテリジェンス", "body": "世界中の数千のニュースソース、ブログ、RSSフィードでブランド報道を追跡。" },
-        "crisisMonitoring": { "name": "クライシスセンター", "body": "エスカレーションワークフローとチーム活動ツールでレピュテーションリスクを即座に通知。" },
-        "competitorIntelligence": { "name": "競合情報", "body": "シェアオブボイス、センチメント、キャンペーン追跡でブランドを競合他社とベンチマーク。" },
-        "aiReporting": { "name": "AIレポート", "body": "AI分析で数分でエグゼクティブ向けインテリジェンスレポートを生成。" },
-        "executiveDashboards": { "name": "エグゼクティブ監視", "body": "メディアとソーシャルプラットフォーム全体でリーダーシップのレピュテーションと存在感を追跡。" }
+        "socialListening": {
+          "name": "ソーシャルリスニング",
+          "body": "リアルタイムで全主要ソーシャルプラットフォーム全体のブランド言及、キーワード、競合他社を監視。"
+        },
+        "commentModerator": {
+          "name": "コメントモデレーター",
+          "body": "FacebookとInstagramからスパム、毒気あるコメント、競合他社の攻撃を自動削除。"
+        },
+        "youtubeModeration": {
+          "name": "YouTubeモデレーター",
+          "body": "ブランドルールに基づくAIモデレーションでYouTubeチャンネルを有害コメントから保護。"
+        },
+        "newsMonitoring": {
+          "name": "ニュースインテリジェンス",
+          "body": "世界中の数千のニュースソース、ブログ、RSSフィードでブランド報道を追跡。"
+        },
+        "crisisMonitoring": {
+          "name": "クライシスセンター",
+          "body": "エスカレーションワークフローとチーム活動ツールでレピュテーションリスクを即座に通知。"
+        },
+        "competitorIntelligence": {
+          "name": "競合情報",
+          "body": "シェアオブボイス、センチメント、キャンペーン追跡でブランドを競合他社とベンチマーク。"
+        },
+        "aiReporting": {
+          "name": "AIレポート",
+          "body": "AI分析で数分でエグゼクティブ向けインテリジェンスレポートを生成。"
+        },
+        "executiveDashboards": {
+          "name": "エグゼクティブ監視",
+          "body": "メディアとソーシャルプラットフォーム全体でリーダーシップのレピュテーションと存在感を追跡。"
+        }
       }
     },
     "howItWorks": {
@@ -156,14 +211,38 @@
       "eyebrow": "業界",
       "title": "レピュテーションを重視するあらゆる業界向け",
       "subtitle": "小売から政府まで、BraneIQはあなたの業界のモニタリングニーズに適応します。",
-      "retail": { "title": "小売＆EC", "body": "製品ローンチ、顧客レビュー、競合キャンペーンを追跡。売上に影響する前にネガティブなセンチメントを特定。" },
-      "banking": { "title": "銀行＆金融", "body": "規制ニュース、顧客苦情、市場センチメントを監視し、機関のレピュテーションを保護。" },
-      "government": { "title": "政府＆公共部門", "body": "世論、政策反応、クライシスナラティブをニュースとソーシャルプラットフォーム全体で追跡。" },
-      "telecom": { "title": "通信", "body": "障害時のセンチメント、競合動向、顧客満足度シグナルをリアルタイムで監視。" },
-      "healthcare": { "title": "医療・ヘルスケア", "body": "機関のレピュテーションを保護し、患者のセンチメントを追跡し、プラットフォーム上の誤報を監視。" },
-      "hospitality": { "title": "ホスピタリティ＆旅行", "body": "ゲストレビュー、トレンディングな目的地、予約プラットフォームとソーシャルでのブランドレピュテーションを監視。" },
-      "education": { "title": "教育", "body": "大学・アカデミーの機関レピュテーション、学生のセンチメント、メディア報道を追跡。" },
-      "agencies": { "title": "代理店＆PR会社", "body": "一つのプラットフォームから複数クライアントを管理。分離ワークスペースでホワイトラベルレポートを提供。" }
+      "retail": {
+        "title": "小売＆EC",
+        "body": "製品ローンチ、顧客レビュー、競合キャンペーンを追跡。売上に影響する前にネガティブなセンチメントを特定。"
+      },
+      "banking": {
+        "title": "銀行＆金融",
+        "body": "規制ニュース、顧客苦情、市場センチメントを監視し、機関のレピュテーションを保護。"
+      },
+      "government": {
+        "title": "政府＆公共部門",
+        "body": "世論、政策反応、クライシスナラティブをニュースとソーシャルプラットフォーム全体で追跡。"
+      },
+      "telecom": {
+        "title": "通信",
+        "body": "障害時のセンチメント、競合動向、顧客満足度シグナルをリアルタイムで監視。"
+      },
+      "healthcare": {
+        "title": "医療・ヘルスケア",
+        "body": "機関のレピュテーションを保護し、患者のセンチメントを追跡し、プラットフォーム上の誤報を監視。"
+      },
+      "hospitality": {
+        "title": "ホスピタリティ＆旅行",
+        "body": "ゲストレビュー、トレンディングな目的地、予約プラットフォームとソーシャルでのブランドレピュテーションを監視。"
+      },
+      "education": {
+        "title": "教育",
+        "body": "大学・アカデミーの機関レピュテーション、学生のセンチメント、メディア報道を追跡。"
+      },
+      "agencies": {
+        "title": "代理店＆PR会社",
+        "body": "一つのプラットフォームから複数クライアントを管理。分離ワークスペースでホワイトラベルレポートを提供。"
+      }
     },
     "testimonials": {
       "eyebrow": "お客様の声",
@@ -326,31 +405,137 @@
   "privacy": {
     "title": "プライバシーポリシー",
     "updated": "最終更新：2026年6月",
-    "intro": "BraneIQはソーシャルリスニングとブランドインテリジェンスソフトウェアを提供しています。本ポリシーは、当社ウェブサイトへの訪問またはサービスの利用時に、情報をどのように収集、使用、保護するかを説明します。",
+    "intro": "BraneIQはソーシャルリスニングとブランドインテリジェンスソフトウェアを提供しています。本ポリシーは、当社ウェブサイトへの訪問またはサービスの利用時に、情報をどのように収集、使用、保護するかを説明します。 The English version at https://braneiq.com/en/privacy-policy is authoritative for third-party API and OAuth compliance disclosures.",
+    "operatorBox": {
+      "title": "アプリケーションと運営者",
+      "application": "アプリケーション",
+      "operator": "運営者",
+      "website": "ウェブサイト",
+      "products": "製品",
+      "contact": "プライバシー連絡先"
+    },
     "sections": {
+      "operator": {
+        "title": "1. Who we are",
+        "body": "BraneIQ is a digital intelligence platform operated by Cozmot Inc. Our public website is hosted at braneiq.com. BraneIQ Listen (insights.braneiq.com) provides social listening and brand intelligence. BraneIQ Moderator (moderator.braneiq.com) provides AI-powered comment moderation for Facebook and Instagram. This policy applies to all BraneIQ properties and is specific to our application and organization."
+      },
+      "scope": {
+        "title": "2. Scope of this policy",
+        "body": "This policy covers:",
+        "bullets": [
+          "Visitors to braneiq.com and localized marketing pages",
+          "Users who register for or log in to BraneIQ products",
+          "Customers who connect third-party accounts (including Google and Meta/Facebook) to BraneIQ",
+          "Demo, contact, and support form submissions",
+          "Website analytics collected through Google Tag Manager and Google Analytics"
+        ]
+      },
       "collection": {
-        "title": "収集する情報",
-        "body": "お客様が直接提供する情報（デモ申し込み時の氏名、メール、会社名など）、プラットフォームの利用データ、お客様の指示に基づき処理する公開ソーシャルコンテンツを収集します。"
+        "title": "3. Information we collect",
+        "body": "Depending on how you interact with BraneIQ, we may collect:",
+        "bullets": [
+          "Account and profile information: name, email address, company name, job title, and authentication identifiers when you create an account or sign in",
+          "Connected account data: information made available when you authorize BraneIQ to access third-party platforms (such as Google or Meta) on your behalf",
+          "Customer workspace data: keywords, brands, moderation rules, alerts, and configuration you submit to the Services",
+          "Public and licensed social content: mentions, comments, posts, and metadata ingested from social platforms and news sources at your direction",
+          "Usage and log data: IP address, browser type, device information, pages viewed, feature usage, timestamps, and diagnostic logs",
+          "Communications: messages you send to support@braneiq.com, demo requests, and sales inquiries",
+          "Payment and billing information: processed by our payment providers where applicable (we do not store full card numbers on BraneIQ servers)"
+        ]
+      },
+      "googleUserData": {
+        "title": "4. Google user data",
+        "body": "If you choose to connect a Google account or use Google sign-in with BraneIQ, we access Google user data only as permitted by you and only to provide the features you request. The specific data we access depends on the Google OAuth scopes you approve during authorization.",
+        "bullets": [
+          "Access: We may access basic profile information (such as your name and email address), account identifiers, and other Google user data required for the integration you enable (for example, authentication, workspace access, or connected Google services you authorize)",
+          "Use: Google user data is used solely to authenticate you, provision your BraneIQ account, deliver product functionality you request, maintain security, provide customer support, and comply with applicable law. We do not use Google user data for unrelated advertising or to sell user data",
+          "Storage: Google user data is stored on secure servers operated by BraneIQ or our infrastructure providers. Access tokens and credentials are encrypted at rest where applicable. Data is stored only for as long as needed to provide the Services or as required by law",
+          "Sharing: We do not sell Google user data. We do not share Google user data with third parties except with subprocessors that help us operate the Services (such as cloud hosting), when required by law, or with your explicit direction. Subprocessors are bound by confidentiality and data-protection obligations",
+          "Human access: BraneIQ personnel do not access Google user data except when necessary for security, support at your request, legal compliance, or aggregated/de-identified internal operations"
+        ]
+      },
+      "googleLimitedUse": {
+        "title": "5. Google API Services — Limited Use disclosure",
+        "body": "BraneIQ's use and transfer of information received from Google APIs will comply with the Google API Services User Data Policy, including the Limited Use requirements. In particular:",
+        "bullets": [
+          "We use Google user data only to provide or improve user-facing features of BraneIQ that you have requested",
+          "We do not use Google user data for serving advertisements, including retargeting, personalized, or interest-based advertising",
+          "We do not sell Google user data to third parties",
+          "We do not use or transfer Google user data for purposes unrelated to the core functionality of BraneIQ except with your consent, for security, for legal compliance, or in aggregated/de-identified form",
+          "Human review of Google user data is limited to the circumstances described in Section 4"
+        ]
+      },
+      "metaUserData": {
+        "title": "6. Meta (Facebook & Instagram) user data",
+        "body": "If you connect Facebook or Instagram accounts to BraneIQ Moderator or other BraneIQ products, we access Meta platform data only as authorized by you and as needed to provide moderation, monitoring, and related features.",
+        "bullets": [
+          "Access: Page IDs, ad account identifiers, access tokens, comments, comment metadata, and related content required to moderate or analyze social interactions you configure",
+          "Use: Solely to provide BraneIQ Moderator and related Services you request, including automated moderation, reporting, and workspace management",
+          "Storage: Encrypted tokens and related data are stored securely and retained only as long as your integration is active or as required by law",
+          "Sharing: We do not sell Meta user data. Sharing is limited to infrastructure providers and subprocessors under contract, legal requirements, or your instructions",
+          "Deletion: When you disconnect a Meta integration or delete your account, we delete or de-identify associated tokens and customer-specific data within a reasonable period, subject to backup and legal retention requirements"
+        ]
+      },
+      "analytics": {
+        "title": "7. Website analytics and cookies",
+        "body": "Our marketing website uses Google Tag Manager and Google Analytics to understand site traffic and improve braneiq.com. These tools may collect cookies, device identifiers, page views, referral URLs, and similar usage data. You can control cookies through your browser settings. Where required by law, we will provide consent mechanisms. Analytics data from the public website is not combined with Google OAuth product data for advertising purposes."
       },
       "use": {
-        "title": "情報の利用方法",
-        "body": "サービスの提供・改善、お問い合わせへの対応、プラットフォームのセキュリティ確保、法的義務の遵守のために情報を使用します。個人情報を販売することはありません。"
+        "title": "8. How we use information",
+        "body": "We use personal information and platform data to:",
+        "bullets": [
+          "Provide, operate, maintain, and improve the Services",
+          "Authenticate users and manage accounts and workspaces",
+          "Process demo requests, support tickets, and customer communications",
+          "Monitor platform security, prevent fraud, and enforce our Terms of Service",
+          "Comply with legal obligations and respond to lawful requests",
+          "Generate aggregated, de-identified analytics to improve product performance"
+        ]
       },
       "sharing": {
-        "title": "情報の共有",
-        "body": "プラットフォーム運営を支援するサービスプロバイダー、法律で要求される場合、またはお客様の同意がある場合に情報を共有します。顧客データはテナントごとに分離されています。"
+        "title": "9. How we share information",
+        "body": "We do not sell personal information. We may share information:",
+        "bullets": [
+          "With service providers (hosting, email, analytics, payment, and support tools) who process data on our behalf under contractual safeguards",
+          "With your organization and authorized workspace members according to your account settings",
+          "When required by law, regulation, legal process, or governmental request",
+          "To protect the rights, safety, and security of BraneIQ, our users, or the public",
+          "In connection with a merger, acquisition, or sale of assets, with notice where required by law"
+        ]
+      },
+      "storage": {
+        "title": "10. Where data is stored",
+        "body": "BraneIQ data is stored on cloud infrastructure operated by reputable providers. Depending on your plan and configuration, data may be processed in the United States or other regions where our subprocessors operate. We implement appropriate safeguards for international transfers where applicable."
       },
       "retention": {
-        "title": "データの保持",
-        "body": "サービス提供および法的要件を満たすために必要な期間、情報を保持します。契約上および規制上の制約の範囲内で、お客様は削除を請求できます。"
+        "title": "11. Data retention",
+        "body": "We retain information for as long as necessary to provide the Services, fulfill the purposes described in this policy, and comply with legal obligations. When you disconnect a third-party integration, close your account, or request deletion, we delete or anonymize customer-specific data within a commercially reasonable period, except where retention is required for backups, dispute resolution, security logs, or legal compliance."
+      },
+      "security": {
+        "title": "12. Security",
+        "body": "We use administrative, technical, and organizational measures designed to protect information, including encryption in transit (TLS), encryption at rest for sensitive credentials where applicable, access controls, tenant isolation, and audit logging. No method of transmission or storage is completely secure; please use strong passwords and protect your account credentials."
       },
       "rights": {
-        "title": "お客様の権利",
-        "body": "お住まいの地域によっては、個人情報へのアクセス、訂正、削除、処理の制限を求める権利がある場合があります。これらの権利を行使するにはお問い合わせください。"
+        "title": "13. Your privacy rights",
+        "body": "Depending on your location, you may have rights to access, correct, delete, restrict, or port your personal information, and to object to certain processing. California residents may have additional rights under the CCPA/CPRA. EEA, UK, and Swiss users may have rights under GDPR. To exercise your rights, contact support@braneiq.com. We will verify your request and respond within applicable legal timeframes."
+      },
+      "revokeAccess": {
+        "title": "14. Revoking third-party access",
+        "body": "You can disconnect third-party integrations at any time:",
+        "bullets": [
+          "Google: Visit your Google Account permissions at https://myaccount.google.com/permissions and remove BraneIQ, or disconnect the integration within your BraneIQ workspace settings",
+          "Meta/Facebook: Remove BraneIQ from your Facebook Business Integrations or Instagram connected apps, or disconnect within BraneIQ Moderator settings",
+          "BraneIQ account: Email support@braneiq.com to request account closure or data deletion",
+          "After revocation, we stop collecting new data from the disconnected service and delete associated tokens according to our retention practices"
+        ]
+      },
+      "changes": {
+        "title": "15. Changes to this policy",
+        "body": "We may update this Privacy Policy from time to time. When we make material changes — including changes to how we access, use, store, or share Google user data — we will update the \"Last updated\" date above and, where appropriate, notify you by email or through the Services. Continued use after changes become effective constitutes acceptance of the updated policy."
       },
       "contact": {
-        "title": "お問い合わせ",
-        "body": "プライバシーに関するご質問は、support@braneiq.com または BraneIQの運営会社 Cozmot Inc までご連絡ください。"
+        "title": "16. Contact us",
+        "body": "For privacy questions, data requests, or Google OAuth verification inquiries, contact Cozmot Inc / BraneIQ at support@braneiq.com. Our privacy policy URL is https://braneiq.com/en/privacy-policy."
       }
     }
   },

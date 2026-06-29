@@ -66,11 +66,6 @@ export async function SiteFooter() {
           </p>
           <ul className="mt-4 space-y-2 text-sm">
             <li>
-              <Link href="/#faq" className="hover:text-white">
-                {t('faq')}
-              </Link>
-            </li>
-            <li>
               <Link href="/privacy-policy" className="hover:text-white">
                 {t('privacy')}
               </Link>
@@ -78,6 +73,11 @@ export async function SiteFooter() {
             <li>
               <Link href="/terms-of-service" className="hover:text-white">
                 {t('terms')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/#faq" className="hover:text-white">
+                {t('faq')}
               </Link>
             </li>
             <li>
@@ -108,7 +108,15 @@ export async function SiteFooter() {
       </div>
 
       <div className="border-t border-slate-800 px-6 py-6 text-center text-xs text-slate-500">
-        © {year} BraneIQ. {t('rights')}
+        <div className="mb-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+          <Link href="/privacy-policy" className="font-medium text-slate-400 hover:text-white">
+            {t('privacy')}
+          </Link>
+          <Link href="/terms-of-service" className="font-medium text-slate-400 hover:text-white">
+            {t('terms')}
+          </Link>
+        </div>
+        © {year} BraneIQ · Cozmot Inc. {t('rights')}
       </div>
     </footer>
   );
