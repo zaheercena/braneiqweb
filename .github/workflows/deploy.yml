@@ -42,21 +42,24 @@ jobs:
           DEPLOY=deploy
 
           rm -rf "$DEPLOY"
-          mkdir -p "$DEPLOY"
+          mkdir -p "$DEPLOY/apps/marketing" "$DEPLOY/node_modules/.pnpm"
 
-          # Follow symlinks (-L) so pnpm-linked node_modules are bundled as real files.
-          cp -aL "$STANDALONE/." "$DEPLOY/"
-          rm -rf "$DEPLOY/.next/static"
-          cp -a "$STATIC" "$DEPLOY/.next/static"
-          cp -a "$PUBLIC" "$DEPLOY/public"
+          cp "$STANDALONE/server.js" "$DEPLOY/apps/marketing/server.js"
+          cp -a "$STANDALONE/.next" "$DEPLOY/apps/marketing/.next"
+          rm -rf "$DEPLOY/apps/marketing/.next/static"
+          cp -a "$STATIC" "$DEPLOY/apps/marketing/.next/static"
+          cp -a "$PUBLIC" "$DEPLOY/apps/marketing/public"
+          cp -a "$STANDALONE/node_modules" "$DEPLOY/apps/marketing/node_modules"
+          cp -a apps/marketing/node_modules/.pnpm/. "$DEPLOY/node_modules/.pnpm/"
+          cp -a node_modules/.pnpm/. "$DEPLOY/node_modules/.pnpm/"
           cp scripts/ec2-post-deploy.sh "$DEPLOY/ec2-post-deploy.sh"
 
           echo "=== Verifying bundled dependencies ==="
-          test -f "$DEPLOY/node_modules/next/package.json"
-          test -f "$DEPLOY/server.js"
+          test -f "$(readlink -f "$DEPLOY/apps/marketing/node_modules/next")/package.json"
+          test -f "$DEPLOY/apps/marketing/server.js"
 
           echo "=== Deployment archive structure ==="
-          find "$DEPLOY" -maxdepth 2 | sort
+          find "$DEPLOY" -maxdepth 3 | sort
 
           COPYFILE_DISABLE=1 tar -czf deploy.tar.gz -C "$DEPLOY" .
           rm -rf "$DEPLOY"

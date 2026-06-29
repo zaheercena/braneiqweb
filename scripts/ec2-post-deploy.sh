@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Flat Next.js standalone layout extracted to /var/www/braneiq-web:
-#   server.js
-#   .next/
-#   .next/static/
-#   public/
-#   node_modules/
+# Monorepo-style standalone layout extracted to /var/www/braneiq-web:
+#   apps/marketing/server.js
+#   apps/marketing/.next/
+#   apps/marketing/public/
+#   apps/marketing/node_modules/   (symlinks)
+#   node_modules/.pnpm/            (real dependency files)
 APP_DIR=/var/www/braneiq-web
+APP_ROOT="$APP_DIR/apps/marketing"
 
 sudo tee /etc/nginx/sites-available/braneiq-web > /dev/null <<'NGINX'
 server {
@@ -15,13 +16,13 @@ server {
     server_name braneiq.com www.braneiq.com;
 
     location /_next/static {
-        alias /var/www/braneiq-web/.next/static;
+        alias /var/www/braneiq-web/apps/marketing/.next/static;
         expires 365d;
         add_header Cache-Control "public, immutable";
     }
 
     location ~* \.(png|jpg|jpeg|gif|ico|svg|webp|woff|woff2|ttf|css|js)$ {
-        root /var/www/braneiq-web/public;
+        root /var/www/braneiq-web/apps/marketing/public;
         try_files $uri @proxy;
         expires 30d;
         add_header Cache-Control "public";
@@ -51,7 +52,7 @@ sudo ln -sf /etc/nginx/sites-available/braneiq-web /etc/nginx/sites-enabled/bran
 sudo nginx -t
 sudo systemctl reload nginx
 
-sudo tee "$APP_DIR/.env" > /dev/null <<ENV
+sudo tee "$APP_ROOT/.env" > /dev/null <<ENV
 NODE_ENV=production
 PORT=3000
 HOSTNAME=0.0.0.0
@@ -63,16 +64,16 @@ SMTP_PASS=${SMTP_PASS:-}
 ENV
 
 echo "=== Verifying deployment ==="
-ls -la "$APP_DIR/server.js"
-test -f "$APP_DIR/node_modules/next/package.json"
+ls -la "$APP_ROOT/server.js"
+test -f "$(readlink -f "$APP_ROOT/node_modules/next")/package.json"
 
 if pm2 list | grep -q "braneiq-web"; then
   pm2 delete braneiq-web
 fi
 
-pm2 start "$APP_DIR/server.js" \
+pm2 start "$APP_ROOT/server.js" \
   --name braneiq-web \
-  --cwd "$APP_DIR" \
+  --cwd "$APP_ROOT" \
   --update-env
 
 pm2 save
