@@ -28,6 +28,17 @@ const SECTIONS = [
   'contact',
 ] as const;
 
+const SECTIONS_WITH_BULLETS = new Set<string>([
+  'scope',
+  'collection',
+  'googleUserData',
+  'googleLimitedUse',
+  'metaUserData',
+  'use',
+  'sharing',
+  'revokeAccess',
+]);
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildPageMetadata({
     locale: params.locale,
@@ -93,7 +104,9 @@ export default async function PrivacyPolicyPage({ params }: Props) {
 
         <div className="mt-12 space-y-10">
           {SECTIONS.map((section) => {
-            const bullets = t.raw(`sections.${section}.bullets`) as string[] | undefined;
+            const bullets = SECTIONS_WITH_BULLETS.has(section)
+              ? (t.raw(`sections.${section}.bullets`) as string[])
+              : undefined;
 
             return (
               <section key={section} id={section}>
