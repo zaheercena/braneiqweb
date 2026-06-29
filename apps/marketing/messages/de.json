@@ -151,32 +151,16 @@
     },
     "industries": {
       "eyebrow": "Branchen",
-      "title": "Entwickelt für Teams in jedem Sektor",
-      "subtitle": "Ob Agentur, globale Marke oder schlankes Kommunikationsteam — BraneIQ passt sich Ihrem Workflow an.",
-      "agencies": {
-        "title": "Agenturen & Beratungen",
-        "body": "Verwalten Sie mehrere Kunden mit isolierten Workspaces, White-Label-Reports und rollenbasiertem Teamzugriff.",
-        "stat": "40 %",
-        "statLabel": "Schnellere Kundenberichte (Ø Pilot-Teams)"
-      },
-      "enterprise": {
-        "title": "Enterprise-Kommunikation & PR",
-        "body": "Überwachen Sie die globale Markengesundheit, verfolgen Sie die Sichtbarkeit von Führungskräften und koordinieren Sie Krisenreaktionen über Regionen hinweg.",
-        "stat": "90 %",
-        "statLabel": "Weniger manueller Monitoring-Aufwand"
-      },
-      "retail": {
-        "title": "Einzelhandel & Konsumgütermarken",
-        "body": "Verfolgen Sie Produktlaunches, UGC und Wettbewerber-Kampagnen, um Reputation zu schützen und Engagement zu steigern.",
-        "stat": "3×",
-        "statLabel": "Schnellere Problemerkennung vs. manuelles Tracking"
-      },
-      "sports": {
-        "title": "Sport & Entertainment",
-        "body": "Erfassen Sie Fan-Stimmung, Sponsoren-Sichtbarkeit und Echtzeit-Buzz bei Events und Spieltagen.",
-        "stat": "15 %",
-        "statLabel": "Mehr Abdeckung bei Engagement-Insights"
-      }
+      "title": "Für jeden Sektor, dem Reputation wichtig ist",
+      "subtitle": "Vom Einzelhandel bis zur öffentlichen Hand — BraneIQ passt sich den Monitoring-Bedürfnissen Ihrer Branche an.",
+      "retail": { "title": "Einzelhandel & E-Commerce", "body": "Produktlaunches, Kundenbewertungen und Wettbewerbskampagnen verfolgen. Negatives Sentiment erkennen, bevor es den Umsatz beeinflusst." },
+      "banking": { "title": "Banken & Finanzen", "body": "Regulierungsnachrichten, Kundenbeschwerden und Marktstimmung überwachen, um institutionelle Reputation zu schützen." },
+      "government": { "title": "Staat & öffentlicher Sektor", "body": "Meinung, Politikreaktionen und Krisennarrative über Nachrichten und Social-Plattformen verfolgen." },
+      "telecom": { "title": "Telekommunikation", "body": "Ausfallstimmung, Wettbewerberbewegungen und Kundenzufriedenheitssignale in Echtzeit überwachen." },
+      "healthcare": { "title": "Gesundheitswesen", "body": "Institutionelle Reputation schützen, Patientenstimmung verfolgen und Fehlinformationen auf Plattformen überwachen." },
+      "hospitality": { "title": "Gastgewerbe & Reisen", "body": "Gastbewertungen, Trendreiseziele und Markenreputation auf Buchungsplattformen und Social verfolgen." },
+      "education": { "title": "Bildung", "body": "Institutionsreputation, Studentenstimmung und Medienberichterstattung für Universitäten und Akademien verfolgen." },
+      "agencies": { "title": "Agenturen & PR-Firmen", "body": "Mehrere Kunden von einer Plattform aus verwalten. White-Label-Berichte mit isolierten Workspaces liefern." }
     },
     "testimonials": {
       "eyebrow": "Kundengeschichten",

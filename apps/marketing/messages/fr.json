@@ -260,6 +260,14 @@
           "q": "Les agences peuvent-elles gérer plusieurs clients ?",
           "a": "Oui. BraneIQ est conçu pour les agences avec des espaces multi-clients, un accès basé sur les rôles et des données isolées par tenant. Chaque client dispose de ses propres marques, mots-clés et rapports."
         },
+        "crisis": {
+          "q": "Comment fonctionne la détection de crise ?",
+          "a": "BraneIQ surveille en continu le volume de mentions et le sentiment. Lorsqu'une anomalie ou un dépassement de seuil est détecté, le Centre de crise envoie des alertes instantanées avec des workflows d'escalade pour que votre équipe réagisse en minutes, pas en heures."
+        },
+        "moderation": {
+          "q": "Comment fonctionne la modération des commentaires ?",
+          "a": "Le Modérateur de commentaires utilise une IA entraînée sur les règles spécifiques de votre marque pour masquer ou supprimer automatiquement le spam, les commentaires toxiques et les attaques concurrentes sur les publicités et posts Facebook et Instagram — 24h/24, sans revérification manuelle."
+        },
         "pricing": {
           "q": "Comment fonctionne la tarification ?",
           "a": "Nous proposons des formules flexibles selon la taille de l'espace, le volume de données et le nombre de sièges. Demandez une démo et nous recommanderons une formule adaptée à vos besoins."
