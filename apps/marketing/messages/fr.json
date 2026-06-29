@@ -279,9 +279,10 @@
       }
     },
     "cta": {
-      "title": "Prêt à voir BraneIQ en action ?",
-      "subtitle": "Réservez une démo personnalisée et découvrez comment les équipes utilisent BraneIQ pour protéger et développer leurs marques.",
-      "button": "Planifier votre démo"
+      "title": "Protégez votre marque avant la prochaine crise.",
+      "subtitle": "Des milliers de conversations sur votre marque ont lieu en ce moment. Soyez le premier à le savoir.",
+      "button": "Réserver une démo",
+      "buttonSecondary": "Planifier une consultation"
     }
   },
   "platform": {
