@@ -260,6 +260,14 @@
           "q": "Können Agenturen mehrere Kunden verwalten?",
           "a": "Ja. BraneIQ ist für Agenturen mit Multi-Client-Workspaces, rollenbasiertem Zugriff und isolierten Daten pro Mandant konzipiert. Jeder Kunde erhält eigene Marken, Keywords und Reports."
         },
+        "crisis": {
+          "q": "Wie funktioniert die Krisenerkennung?",
+          "a": "BraneIQ überwacht kontinuierlich Erwähnungsvolumen und Sentiment. Wenn eine Anomalie oder Schwellenwertüberschreitung erkannt wird, sendet das Krisenzentrum sofortige Alarme mit Eskalations-Workflows, damit Ihr Team in Minuten reagieren kann."
+        },
+        "moderation": {
+          "q": "Wie funktioniert die Kommentar-Moderation?",
+          "a": "Der Kommentar-Moderator verwendet KI, die auf den spezifischen Regeln Ihrer Marke trainiert ist, um Spam, toxische Kommentare und Konkurrenzangriffe aus Facebook- und Instagram-Anzeigen und organischen Posts automatisch zu verstecken oder zu löschen — 24/7, ohne manuelle Überprüfung."
+        },
         "pricing": {
           "q": "Wie funktioniert die Preisgestaltung?",
           "a": "Wir bieten flexible Pläne basierend auf Workspace-Größe, Datenvolumen und Team-Plätzen. Fordern Sie eine Demo an — wir empfehlen einen passenden Plan für Ihre Anforderungen."
@@ -271,9 +279,10 @@
       }
     },
     "cta": {
-      "title": "Bereit, BraneIQ in Aktion zu sehen?",
-      "subtitle": "Buchen Sie eine personalisierte Demo und erfahren Sie, wie Teams BraneIQ nutzen, um Marken zu schützen und zu stärken.",
-      "button": "Demo vereinbaren"
+      "title": "Schützen Sie Ihre Marke vor der nächsten Krise.",
+      "subtitle": "Tausende Gespräche über Ihre Marke finden gerade statt. Stellen Sie sicher, dass Sie es als Erster erfahren.",
+      "button": "Demo buchen",
+      "buttonSecondary": "Beratung vereinbaren"
     }
   },
   "platform": {
