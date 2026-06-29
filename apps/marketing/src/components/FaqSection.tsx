@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
-const faqKeys = ['what', 'sources', 'teams', 'pricing', 'demo'] as const;
+const faqKeys = ['what', 'sources', 'teams', 'crisis', 'moderation', 'pricing', 'demo'] as const;
 
 export function FaqSection() {
   const t = useTranslations('home.faq');

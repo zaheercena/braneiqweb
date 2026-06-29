@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { CtaBanner } from '@/components/CtaBanner';
 import { FaqSection } from '@/components/FaqSection';
-import { FeatureGrid } from '@/components/FeatureGrid';
 import { Hero } from '@/components/Hero';
 import { HowItWorksSection } from '@/components/HowItWorksSection';
 import { IndustriesSection } from '@/components/IndustriesSection';
@@ -13,6 +12,8 @@ import { HomeJsonLd } from '@/components/seo/HomeJsonLd';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { TrustedByStrip } from '@/components/TrustedByStrip';
 import { TrustSection } from '@/components/TrustSection';
+import { ValueProps } from '@/components/ValueProps';
+import { ComparisonSection } from '@/components/ComparisonSection';
 import { buildPageMetadata } from '@/lib/metadata';
 
 type Props = {
@@ -36,12 +37,13 @@ export default function HomePage({ params }: Props) {
       <Hero />
       <TrustedByStrip />
       <StatsBar />
+      <ValueProps />
       <SolutionsSection />
       <HowItWorksSection />
-      <FeatureGrid />
       <IndustriesSection />
-      <TestimonialsSection />
       <IntegrationsSection />
+      <ComparisonSection />
+      <TestimonialsSection />
       <TrustSection />
       <FaqSection />
       <CtaBanner />
