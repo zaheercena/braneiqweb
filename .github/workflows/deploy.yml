@@ -27,11 +27,24 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --filter @braneiq/marketing...
 
+      - name: Set GA measurement ID from GA_CODE secret
+        env:
+          GA_CODE: ${{ secrets.GA_CODE }}
+        run: |
+          ID=$(printf '%s' "$GA_CODE" | grep -oE 'G-[A-Z0-9]+' | head -1)
+          if [ -z "$ID" ]; then
+            echo "Could not extract GA measurement ID from GA_CODE secret"
+            exit 1
+          fi
+          echo "NEXT_PUBLIC_GA_MEASUREMENT_ID=$ID" >> "$GITHUB_ENV"
+          echo "Using GA measurement ID: $ID"
+
       - name: Build application
         env:
           NEXT_PUBLIC_SITE_URL: https://braneiq.com
           NEXT_PUBLIC_APP_URL: https://app.braneiq.com
           NEXT_PUBLIC_GTM_ID: GTM-5GWN244W
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ env.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
         run: pnpm --filter @braneiq/marketing build
 
       - name: Create deployment archive
@@ -75,14 +88,16 @@ jobs:
         env:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          GA_MEASUREMENT_ID: ${{ env.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
         run: |
           scp -i ~/.ssh/ec2_key deploy.tar.gz ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
 
           ssh -i ~/.ssh/ec2_key \
             -o SendEnv=SMTP_USER \
             -o SendEnv=SMTP_PASS \
+            -o SendEnv=GA_MEASUREMENT_ID \
             ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} \
-            "SMTP_USER='${SMTP_USER}' SMTP_PASS='${SMTP_PASS}' bash -s" << 'EOF'
+            "SMTP_USER='${SMTP_USER}' SMTP_PASS='${SMTP_PASS}' GA_MEASUREMENT_ID='${GA_MEASUREMENT_ID}' bash -s" << 'EOF'
             set -e
 
             APP_DIR=/var/www/braneiq-web
@@ -95,7 +110,7 @@ jobs:
             sudo mkdir -p "$APP_DIR"
             sudo tar -xzf /tmp/deploy.tar.gz -C "$APP_DIR"
             sudo chown -R ubuntu:ubuntu "$APP_DIR"
-            SMTP_USER="${SMTP_USER}" SMTP_PASS="${SMTP_PASS}" bash "$APP_DIR/ec2-post-deploy.sh"
+            SMTP_USER="${SMTP_USER}" SMTP_PASS="${SMTP_PASS}" GA_MEASUREMENT_ID="${GA_MEASUREMENT_ID}" bash "$APP_DIR/ec2-post-deploy.sh"
             rm -f /tmp/deploy.tar.gz
             echo "Deployment completed!"
           EOF

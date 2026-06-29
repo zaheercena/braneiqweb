@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing, type Locale } from '@/i18n/routing';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import { GoogleTagManagerBody, GoogleTagManagerHead } from '@/components/analytics/GoogleTagManager';
 import { SeoHeadLinks } from '@/components/seo/SeoHeadLinks';
 import { buildRootMetadata } from '@/lib/metadata';
@@ -47,6 +48,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       </head>
       <body className="min-h-screen bg-white text-slate-900 antialiased">
         <GoogleTagManagerBody />
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           <SiteHeader />
           <main id="main-content">{children}</main>
