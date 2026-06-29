@@ -73,8 +73,11 @@
         "positive": "正面",
         "alerts": "活跃警报",
         "active": "待审核",
+        "crisisRisk": "危机风险",
+        "crisisValue": "低",
         "sample1": "X 上品牌提及激增 — 340 条/小时",
-        "sample2": "竞品活动在德国成为热门话题"
+        "sample2": "竞品活动在德国成为热门话题",
+        "sample3": "12 条垃圾评论已在 FB 广告上自动审核"
       }
     },
     "trustedBy": {

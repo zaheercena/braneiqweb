@@ -73,8 +73,11 @@
         "positive": "Positiv",
         "alerts": "Aktive Alarme",
         "active": "Prüfung erforderlich",
+        "crisisRisk": "Krisenrisiko",
+        "crisisValue": "Gering",
         "sample1": "Markenerwähnungs-Spike auf X — 340 Beiträge/Std.",
-        "sample2": "Wettbewerber-Kampagne trendet in DE"
+        "sample2": "Wettbewerber-Kampagne trendet in DE",
+        "sample3": "12 Spam-Kommentare auf FB-Anzeigen automatisch moderiert"
       }
     },
     "trustedBy": {

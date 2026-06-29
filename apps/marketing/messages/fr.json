@@ -73,8 +73,11 @@
         "positive": "Positif",
         "alerts": "Alertes actives",
         "active": "À examiner",
+        "crisisRisk": "Risque de crise",
+        "crisisValue": "Faible",
         "sample1": "Pic de mentions de marque sur X — 340 publications/h",
-        "sample2": "Campagne concurrente tendance en DE"
+        "sample2": "Campagne concurrente tendance en DE",
+        "sample3": "12 commentaires spam auto-modérés sur les pubs FB"
       }
     },
     "trustedBy": {

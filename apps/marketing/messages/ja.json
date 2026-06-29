@@ -73,8 +73,11 @@
         "positive": "ポジティブ",
         "alerts": "アクティブなアラート",
         "active": "要確認",
+        "crisisRisk": "危機リスク",
+        "crisisValue": "低",
         "sample1": "Xでブランド言及が急増 — 340件/時",
-        "sample2": "競合キャンペーンがDEでトレンド入り"
+        "sample2": "競合キャンペーンがDEでトレンド入り",
+        "sample3": "FB広告のスパムコメント12件を自動モデレート"
       }
     },
     "trustedBy": {
