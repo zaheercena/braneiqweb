@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing, type Locale } from '@/i18n/routing';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { GoogleTagManagerBody, GoogleTagManagerHead } from '@/components/analytics/GoogleTagManager';
-import { getSiteUrl } from '@/lib/seo';
+import { SeoHeadLinks } from '@/components/seo/SeoHeadLinks';
+import { buildRootMetadata } from '@/lib/metadata';
 import './globals.css';
 
 type Props = {
@@ -25,29 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
-  const t = await getTranslations({ locale, namespace: 'metadata' });
-  const siteUrl = getSiteUrl();
-
-  return {
-    metadataBase: new URL(siteUrl),
-    title: {
-      default: t('defaultTitle'),
-      template: `%s | ${t('siteName')}`,
-    },
-    description: t('defaultDescription'),
-    authors: [{ name: 'Cozmot Inc', url: siteUrl }],
-    creator: 'BraneIQ',
-    publisher: 'Cozmot Inc',
-    formatDetection: {
-      email: false,
-      address: false,
-      telephone: false,
-    },
-    other: {
-      'link:llms': `${siteUrl}/llms.txt`,
-      'link:llms-full': `${siteUrl}/llms-full.txt`,
-    },
-  };
+  return buildRootMetadata(locale);
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
@@ -64,6 +43,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale}>
       <head>
         <GoogleTagManagerHead />
+        <SeoHeadLinks />
       </head>
       <body className="min-h-screen bg-white text-slate-900 antialiased">
         <GoogleTagManagerBody />

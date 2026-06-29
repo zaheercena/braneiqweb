@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { PRODUCT_URLS } from '@/lib/products';
 import { buildCanonicalUrl, getAppUrl, getSiteUrl } from '@/lib/seo';
 
 const FAQ_KEYS = ['what', 'sources', 'teams', 'crisis', 'moderation', 'pricing', 'demo'] as const;
@@ -13,6 +14,7 @@ export async function HomeJsonLd({ locale }: Props) {
   const faq = await getTranslations({ locale, namespace: 'home.faq.items' });
   const siteUrl = getSiteUrl();
   const pageUrl = buildCanonicalUrl(locale);
+  const logoUrl = `${siteUrl}/icon-512.png`;
 
   const organization = {
     '@context': 'https://schema.org',
@@ -20,9 +22,15 @@ export async function HomeJsonLd({ locale }: Props) {
     '@id': `${siteUrl}/#organization`,
     name: 'BraneIQ',
     url: siteUrl,
-    logo: `${siteUrl}/icon`,
+    logo: {
+      '@type': 'ImageObject',
+      url: logoUrl,
+      width: 512,
+      height: 512,
+    },
+    image: logoUrl,
     description: t('defaultDescription'),
-    email: 'support@braneiq.com',
+    email: 'hello@braneiq.com',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
@@ -52,6 +60,10 @@ export async function HomeJsonLd({ locale }: Props) {
     isPartOf: { '@id': `${siteUrl}/#website` },
     about: { '@id': `${siteUrl}/#organization` },
     inLanguage: locale,
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/opengraph-image`,
+    },
   };
 
   const software = {
@@ -70,6 +82,28 @@ export async function HomeJsonLd({ locale }: Props) {
     },
   };
 
+  const listenProduct = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'BraneIQ Listen',
+    description:
+      'Social listening and brand intelligence — monitor mentions, track sentiment, and act on insights across social channels.',
+    url: PRODUCT_URLS.listen,
+    brand: { '@type': 'Brand', name: 'BraneIQ' },
+    category: 'Social Listening Software',
+  };
+
+  const moderatorProduct = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'BraneIQ Moderator',
+    description:
+      'AI-powered comment moderation for Facebook and Instagram ads and organic posts.',
+    url: PRODUCT_URLS.moderator,
+    brand: { '@type': 'Brand', name: 'BraneIQ' },
+    category: 'Social Media Moderation Software',
+  };
+
   const faqPage = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -83,5 +117,9 @@ export async function HomeJsonLd({ locale }: Props) {
     })),
   };
 
-  return <JsonLd data={[organization, website, webPage, software, faqPage]} />;
+  return (
+    <JsonLd
+      data={[organization, website, webPage, software, listenProduct, moderatorProduct, faqPage]}
+    />
+  );
 }
