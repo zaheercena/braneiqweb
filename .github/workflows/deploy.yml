@@ -41,10 +41,12 @@ jobs:
           PUBLIC=apps/marketing/public
           echo "=== Standalone structure ==="
           find "$STANDALONE" -maxdepth 3 | sort
+          # server.js lives at standalone/apps/marketing/server.js
+          # Copy static and public next to it so Next.js can find them
           mkdir -p "$STANDALONE/apps/marketing/.next"
           cp -r "$STATIC" "$STANDALONE/apps/marketing/.next/static"
           cp -r "$PUBLIC" "$STANDALONE/apps/marketing/public"
-          cp scripts/ec2-post-deploy.sh "$STANDALONE/ec2-post-deploy.sh"
+          cp scripts/ec2-post-deploy.sh "$STANDALONE/apps/marketing/ec2-post-deploy.sh"
           tar -czf deploy.tar.gz -C "$STANDALONE" .
 
       - name: Setup SSH
@@ -78,7 +80,7 @@ jobs:
             sudo mkdir -p "$APP_DIR"
             sudo tar -xzf /tmp/deploy.tar.gz -C "$APP_DIR"
             sudo chown -R ubuntu:ubuntu "$APP_DIR"
-            SMTP_USER="${SMTP_USER}" SMTP_PASS="${SMTP_PASS}" bash "$APP_DIR/ec2-post-deploy.sh"
+            SMTP_USER="${SMTP_USER}" SMTP_PASS="${SMTP_PASS}" bash "$APP_DIR/apps/marketing/ec2-post-deploy.sh"
             rm -f /tmp/deploy.tar.gz
             echo "Deployment completed!"
           EOF

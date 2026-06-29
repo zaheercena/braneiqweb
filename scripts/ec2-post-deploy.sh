@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# The tar archive is extracted to APP_DIR.
+# Next.js standalone structure inside the archive:
+#   apps/marketing/server.js        ← the app entry point
+#   apps/marketing/.next/           ← build output
+#   apps/marketing/.next/static/    ← static assets
+#   apps/marketing/public/          ← public assets
+#   node_modules/                   ← shared node_modules
 APP_DIR=/var/www/braneiq-web
+APP_ROOT="$APP_DIR/apps/marketing"
 
 sudo tee /etc/nginx/sites-available/braneiq-web > /dev/null <<'NGINX'
 server {
@@ -45,7 +53,8 @@ sudo ln -sf /etc/nginx/sites-available/braneiq-web /etc/nginx/sites-enabled/bran
 sudo nginx -t
 sudo systemctl reload nginx
 
-sudo tee "$APP_DIR/.env" > /dev/null <<ENV
+# Write .env alongside server.js so Next.js picks it up at runtime
+sudo tee "$APP_ROOT/.env" > /dev/null <<ENV
 NODE_ENV=production
 PORT=3000
 HOSTNAME=0.0.0.0
@@ -56,26 +65,16 @@ SMTP_USER=${SMTP_USER}
 SMTP_PASS=${SMTP_PASS}
 ENV
 
+echo "=== Verifying server.js location ==="
+ls -la "$APP_ROOT/server.js"
+
 if pm2 list | grep -q "braneiq-web"; then
   pm2 delete braneiq-web
 fi
 
-# Locate server.js — Next.js standalone puts it at the standalone root
-if [ -f "$APP_DIR/server.js" ]; then
-  SERVER_JS="$APP_DIR/server.js"
-elif [ -f "$APP_DIR/apps/marketing/server.js" ]; then
-  SERVER_JS="$APP_DIR/apps/marketing/server.js"
-else
-  echo "ERROR: server.js not found. Contents of $APP_DIR:"
-  find "$APP_DIR" -name "server.js" | head -20
-  exit 1
-fi
-
-echo "Starting PM2 with: $SERVER_JS"
-
-pm2 start "$SERVER_JS" \
+pm2 start "$APP_ROOT/server.js" \
   --name braneiq-web \
-  --cwd "$APP_DIR" \
+  --cwd "$APP_ROOT" \
   --update-env
 
 pm2 save
