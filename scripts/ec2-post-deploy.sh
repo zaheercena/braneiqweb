@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# The tar archive is extracted to APP_DIR.
-# Next.js standalone structure inside the archive:
-#   apps/marketing/server.js        ← the app entry point
-#   apps/marketing/.next/           ← build output
-#   apps/marketing/.next/static/    ← static assets
-#   apps/marketing/public/          ← public assets
-#   node_modules/                   ← shared node_modules
+# Flat Next.js standalone layout extracted to /var/www/braneiq-web:
+#   server.js
+#   .next/
+#   .next/static/
+#   public/
+#   node_modules/
 APP_DIR=/var/www/braneiq-web
-APP_ROOT="$APP_DIR/apps/marketing"
 
 sudo tee /etc/nginx/sites-available/braneiq-web > /dev/null <<'NGINX'
 server {
@@ -17,13 +15,13 @@ server {
     server_name braneiq.com www.braneiq.com;
 
     location /_next/static {
-        alias /var/www/braneiq-web/apps/marketing/.next/static;
+        alias /var/www/braneiq-web/.next/static;
         expires 365d;
         add_header Cache-Control "public, immutable";
     }
 
     location ~* \.(png|jpg|jpeg|gif|ico|svg|webp|woff|woff2|ttf|css|js)$ {
-        root /var/www/braneiq-web/apps/marketing/public;
+        root /var/www/braneiq-web/public;
         try_files $uri @proxy;
         expires 30d;
         add_header Cache-Control "public";
@@ -53,28 +51,32 @@ sudo ln -sf /etc/nginx/sites-available/braneiq-web /etc/nginx/sites-enabled/bran
 sudo nginx -t
 sudo systemctl reload nginx
 
-# Write .env alongside server.js so Next.js picks it up at runtime
-sudo tee "$APP_ROOT/.env" > /dev/null <<ENV
+sudo tee "$APP_DIR/.env" > /dev/null <<ENV
 NODE_ENV=production
 PORT=3000
 HOSTNAME=0.0.0.0
 NEXT_PUBLIC_SITE_URL=https://braneiq.com
 NEXT_PUBLIC_APP_URL=https://app.braneiq.com
 NEXT_PUBLIC_GTM_ID=GTM-5GWN244W
-SMTP_USER=${SMTP_USER}
-SMTP_PASS=${SMTP_PASS}
+SMTP_USER=${SMTP_USER:-}
+SMTP_PASS=${SMTP_PASS:-}
 ENV
 
-echo "=== Verifying server.js location ==="
-ls -la "$APP_ROOT/server.js"
+echo "=== Verifying deployment ==="
+ls -la "$APP_DIR/server.js"
+test -f "$APP_DIR/node_modules/next/package.json"
 
 if pm2 list | grep -q "braneiq-web"; then
   pm2 delete braneiq-web
 fi
 
-pm2 start "$APP_ROOT/server.js" \
+pm2 start "$APP_DIR/server.js" \
   --name braneiq-web \
-  --cwd "$APP_ROOT" \
+  --cwd "$APP_DIR" \
   --update-env
 
 pm2 save
+
+echo "=== Health check ==="
+sleep 2
+curl -sf "http://127.0.0.1:3000/api/health"
