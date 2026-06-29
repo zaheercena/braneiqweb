@@ -39,15 +39,28 @@ jobs:
           STANDALONE=apps/marketing/.next/standalone
           STATIC=apps/marketing/.next/static
           PUBLIC=apps/marketing/public
-          echo "=== Standalone structure ==="
-          find "$STANDALONE" -maxdepth 3 | sort
-          # server.js lives at standalone/apps/marketing/server.js
-          # Copy static and public next to it so Next.js can find them
-          mkdir -p "$STANDALONE/apps/marketing/.next"
-          cp -r "$STATIC" "$STANDALONE/apps/marketing/.next/static"
-          cp -r "$PUBLIC" "$STANDALONE/apps/marketing/public"
-          cp scripts/ec2-post-deploy.sh "$STANDALONE/apps/marketing/ec2-post-deploy.sh"
-          tar -czf deploy.tar.gz -C "$STANDALONE" .
+          PKG=apps/marketing/package.json
+          DEPLOY=deploy
+
+          rm -rf "$DEPLOY"
+          mkdir -p "$DEPLOY/apps/marketing"
+
+          # Reorganize the Next.js standalone output so the application is rooted at
+          # apps/marketing and node_modules is at the archive root.
+          cp -a "$STANDALONE/.next" "$DEPLOY/apps/marketing/.next"
+          rm -rf "$DEPLOY/apps/marketing/.next/static"
+          cp -a "$STATIC" "$DEPLOY/apps/marketing/.next/static"
+          cp "$STANDALONE/server.js" "$DEPLOY/apps/marketing/server.js"
+          cp -a "$STANDALONE/node_modules" "$DEPLOY/node_modules"
+          cp -a "$PUBLIC" "$DEPLOY/apps/marketing/public"
+          cp "$PKG" "$DEPLOY/apps/marketing/package.json"
+          cp scripts/ec2-post-deploy.sh "$DEPLOY/apps/marketing/ec2-post-deploy.sh"
+
+          echo "=== Deployment archive structure ==="
+          find "$DEPLOY" -maxdepth 3 | sort
+
+          tar -czf deploy.tar.gz -C "$DEPLOY" .
+          rm -rf "$DEPLOY"
 
       - name: Setup SSH
         run: |
