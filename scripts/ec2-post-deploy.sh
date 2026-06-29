@@ -60,7 +60,20 @@ if pm2 list | grep -q "braneiq-web"; then
   pm2 delete braneiq-web
 fi
 
-pm2 start "$APP_DIR/apps/marketing/server.js" \
+# Locate server.js — Next.js standalone puts it at the standalone root
+if [ -f "$APP_DIR/server.js" ]; then
+  SERVER_JS="$APP_DIR/server.js"
+elif [ -f "$APP_DIR/apps/marketing/server.js" ]; then
+  SERVER_JS="$APP_DIR/apps/marketing/server.js"
+else
+  echo "ERROR: server.js not found. Contents of $APP_DIR:"
+  find "$APP_DIR" -name "server.js" | head -20
+  exit 1
+fi
+
+echo "Starting PM2 with: $SERVER_JS"
+
+pm2 start "$SERVER_JS" \
   --name braneiq-web \
   --cwd "$APP_DIR" \
   --update-env

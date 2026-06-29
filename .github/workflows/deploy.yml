@@ -39,6 +39,8 @@ jobs:
           STANDALONE=apps/marketing/.next/standalone
           STATIC=apps/marketing/.next/static
           PUBLIC=apps/marketing/public
+          echo "=== Standalone structure ==="
+          find "$STANDALONE" -maxdepth 3 | sort
           mkdir -p "$STANDALONE/apps/marketing/.next"
           cp -r "$STATIC" "$STANDALONE/apps/marketing/.next/static"
           cp -r "$PUBLIC" "$STANDALONE/apps/marketing/public"
