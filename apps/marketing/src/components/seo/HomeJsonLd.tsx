@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { buildCanonicalUrl, getAppUrl, getSiteUrl } from '@/lib/seo';
 
-const FAQ_KEYS = ['what', 'sources', 'teams', 'pricing', 'demo'] as const;
+const FAQ_KEYS = ['what', 'sources', 'teams', 'crisis', 'moderation', 'pricing', 'demo'] as const;
 
 type Props = {
   locale: string;
@@ -22,11 +22,11 @@ export async function HomeJsonLd({ locale }: Props) {
     url: siteUrl,
     logo: `${siteUrl}/icon`,
     description: t('defaultDescription'),
-    email: 'hello@braneiq.com',
+    email: 'support@braneiq.com',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'hello@braneiq.com',
+      email: 'support@braneiq.com',
       availableLanguage: ['English', 'German', 'French', 'Japanese', 'Chinese'],
     },
   };

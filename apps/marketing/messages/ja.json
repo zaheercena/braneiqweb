@@ -338,7 +338,7 @@
       },
       "contact": {
         "title": "お問い合わせ",
-        "body": "プライバシーに関するご質問は、privacy@braneiq.com または BraneIQの運営会社 Cozmot Inc までご連絡ください。"
+        "body": "プライバシーに関するご質問は、support@braneiq.com または BraneIQの運営会社 Cozmot Inc までご連絡ください。"
       }
     }
   },
@@ -357,7 +357,7 @@
       },
       "accounts": {
         "title": "アカウントとセキュリティ",
-        "body": "正確な登録情報を提供し、認証情報を秘密に保持する必要があります。お客様のアカウント下で行われるすべての活動について責任を負います。不正アクセスがあった場合は、hello@braneiq.com まで速やかにご連絡ください。"
+        "body": "正確な登録情報を提供し、認証情報を秘密に保持する必要があります。お客様のアカウント下で行われるすべての活動について責任を負います。不正アクセスがあった場合は、support@braneiq.com まで速やかにご連絡ください。"
       },
       "acceptableUse": {
         "title": "許容される利用",
@@ -393,7 +393,7 @@
       },
       "contact": {
         "title": "お問い合わせ",
-        "body": "本規約に関するご質問は hello@braneiq.com までご連絡ください。BraneIQは Cozmot Inc により運営されています。"
+        "body": "本規約に関するご質問は support@braneiq.com までご連絡ください。BraneIQは Cozmot Inc により運営されています。"
       }
     }
   }

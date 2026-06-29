@@ -45,8 +45,8 @@ ${locales}
 
 ## Contact
 
-- Email: hello@braneiq.com
-- Privacy: privacy@braneiq.com
+- Email: support@braneiq.com
+- Privacy: support@braneiq.com
 - Demo: ${siteUrl}/en/request-demo
 
 ## Optional
