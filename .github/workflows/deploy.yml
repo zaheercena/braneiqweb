@@ -101,17 +101,51 @@ jobs:
             set -e
 
             APP_DIR=/var/www/braneiq-web
-            BACKUP_DIR=/var/www/braneiq-web-backup-$(date +%Y%m%d-%H%M%S)
+            STAGING_DIR=/var/www/braneiq-web-staging
+            MIN_FREE_MB=800
 
-            if [ -d "$APP_DIR" ]; then
-              sudo mv "$APP_DIR" "$BACKUP_DIR"
+            echo "=== Disk usage before deploy ==="
+            df -h / /var /tmp || df -h /
+
+            free_mb=$(df -Pm / | awk 'NR==2 {print $4}')
+            echo "Free space on /: ${free_mb}MB (need at least ${MIN_FREE_MB}MB)"
+
+            # Old deploys kept full backups here and never deleted them — main cause of disk exhaustion
+            if ls /var/www/braneiq-web-backup-* >/dev/null 2>&1; then
+              echo "Removing old deployment backups"
+              sudo rm -rf /var/www/braneiq-web-backup-*
+            fi
+            sudo rm -rf "$STAGING_DIR"
+
+            free_mb=$(df -Pm / | awk 'NR==2 {print $4}')
+            if [ "$free_mb" -lt "$MIN_FREE_MB" ]; then
+              echo "Low disk space — running emergency cleanup"
+              sudo rm -f /tmp/deploy.tar.gz.old
+              sudo journalctl --vacuum-time=3d 2>/dev/null || true
+              pm2 flush braneiq-web 2>/dev/null || true
+              sudo apt-get clean 2>/dev/null || true
+              free_mb=$(df -Pm / | awk 'NR==2 {print $4}')
+              echo "Free space after cleanup: ${free_mb}MB"
             fi
 
+            if [ "$free_mb" -lt "$MIN_FREE_MB" ]; then
+              echo "ERROR: Not enough disk space to deploy. SSH into EC2, run scripts/ec2-disk-cleanup.sh, or expand the volume."
+              exit 1
+            fi
+
+            # Remove the running app before extract to avoid needing 2x disk (old copy + new copy)
+            pm2 delete braneiq-web 2>/dev/null || true
+            sudo rm -rf "$APP_DIR"
             sudo mkdir -p "$APP_DIR"
             sudo tar -xzf /tmp/deploy.tar.gz -C "$APP_DIR"
             sudo chown -R ubuntu:ubuntu "$APP_DIR"
+
             SMTP_USER="${SMTP_USER}" SMTP_PASS="${SMTP_PASS}" GA_MEASUREMENT_ID="${GA_MEASUREMENT_ID}" bash "$APP_DIR/ec2-post-deploy.sh"
+
             rm -f /tmp/deploy.tar.gz
+
+            echo "=== Disk usage after deploy ==="
+            df -h / /var /tmp || df -h /
             echo "Deployment completed!"
           EOF
 
