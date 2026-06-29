@@ -81,53 +81,35 @@
       "title": "深受全球传播与营销团队信赖"
     },
     "stats": {
-      "sources": { "value": "10+", "label": "数据源" },
-      "languages": { "value": "5", "label": "支持语言" },
-      "latency": { "value": "<1 分钟", "label": "警报延迟" },
-      "uptime": { "value": "99.9%", "label": "平台可用性" }
+      "posts": { "value": "2500万+", "label": "已分析帖子" },
+      "sources": { "value": "100+", "label": "支持来源" },
+      "uptime": { "value": "99.9%", "label": "平台可用性" },
+      "monitoring": { "value": "24/7", "label": "实时监控" }
+    },
+    "valueProps": {
+      "eyebrow": "为何选择 BraneIQ",
+      "title": "保护声誉。了解市场。先于竞争对手采取行动。",
+      "subtitle": "每项功能都围绕一个目标设计：为团队提供所需的情报，让决策更能带来自信。",
+      "crisis": { "title": "早期检测声誉危机", "body": "当情感发生转变或提及量急增时立即受到警报—应对危机早于主流媒体数小时。" },
+      "spam": { "title": "在客户看到垃圾信息前拦截", "body": "AI 自动删除广告和帖子中的恶意评论、垃圾信息和竞争对手攻击。" },
+      "competitors": { "title": "实时跟踪竞争对手", "body": "监控竞争对手的广告活动、产品发布和公众情感，识别差距和机遇。" },
+      "campaigns": { "title": "衡量广告活动效果", "body": "跨每个渠道定量化品牌知名度、声量份额和受众情感。" },
+      "sentiment": { "title": "理解客户情感", "body": "超越点赞和分享。了解客户对您的品牌、产品和服务的真实看法。" },
+      "executive": { "title": "监控高管声誉", "body": "跟踪关键高管的提及、情感和叙事，保护领导层声誉。" }
     },
     "solutions": {
-      "eyebrow": "解决方案",
-      "title": "聆听、分析与行动的一体化平台",
-      "subtitle": "BraneIQ 将监控、情感分析与工作流融为一体 — 专为需要速度与清晰度的团队打造。",
+      "eyebrow": "产品生态",
+      "title": "一个平台。八个强大产品。",
+      "subtitle": "BraneIQ 不只是一个工具—它是一个完整的情报平台，为每种需求提供专业化产品。",
       "products": {
-        "listen": {
-          "name": "BraneIQ Listen",
-          "body": "insights.braneiq.com 上的社交聆听与品牌智能 — 跨渠道监控提及、追踪情感并基于洞察采取行动。",
-          "cta": "打开 insights.braneiq.com"
-        },
-        "moderator": {
-          "name": "BraneIQ Moderator",
-          "body": "moderator.braneiq.com 上的 AI 评论审核 — 保护 Facebook 和 Instagram 广告及自然帖子免受垃圾信息和滥用。",
-          "cta": "打开 moderator.braneiq.com"
-        }
-      },
-      "listening": {
-        "title": "社交聆听",
-        "body": "通过灵活的查询和实时信息流，跨社交渠道追踪品牌、关键词和竞争对手。",
-        "points": {
-          "1": "关键词与布尔查询构建器",
-          "2": "多品牌、多客户工作空间",
-          "3": "跨数据源统一时间线"
-        }
-      },
-      "sentiment": {
-        "title": "情感与分析",
-        "body": "通过为分析师和高管设计的仪表板，了解语调、声量和话语权占比。",
-        "points": {
-          "1": "AI 驱动的情感评分",
-          "2": "趋势与峰值检测",
-          "3": "可导出的高管报告"
-        }
-      },
-      "crisis": {
-        "title": "危机与声誉",
-        "body": "通过智能警报、升级路径和团队工作流，及早发现声誉风险。",
-        "points": {
-          "1": "阈值与异常警报",
-          "2": "分配、评论和解决案例",
-          "3": "合规团队的审计追踪"
-        }
+        "socialListening": { "name": "社交监听", "body": "实时监控全主要社交平台的品牌提及、关键词和竞争对手。" },
+        "commentModerator": { "name": "评论审核器", "body": "自动删除 Facebook 和 Instagram 中的垃圾信息、恶意评论和竞争攻击。" },
+        "youtubeModeration": { "name": "YouTube 审核器", "body": "通过基于品牌规则的 AI 审核保护 YouTube 频道免受有害评论。" },
+        "newsMonitoring": { "name": "新闻情报", "body": "全球数千个新闻源、博客和 RSS 源的品牌报道跨度追踪。" },
+        "crisisMonitoring": { "name": "危机中心", "body": "通过升级工作流和团队协作工具，即时获得声誉风险警报。" },
+        "competitorIntelligence": { "name": "竞争情报", "body": "通过声量份额、情感和广告追踪将品牌与竞争对手进行标准比较。" },
+        "aiReporting": { "name": "AI 报告", "body": "利用 AI 分析在数分钟内生成高管就绪的情报报告。" },
+        "executiveDashboards": { "name": "高管监控", "body": "跨媒体和社交平台跟踪领导层声誉和曝光度。" }
       }
     },
     "howItWorks": {
@@ -223,13 +205,35 @@
       }
     },
     "integrations": {
-      "eyebrow": "数据源",
-      "title": "连接重要渠道",
-      "subtitle": "从社交平台和新闻源摄取提及 — 更多连接器持续上线。",
-      "more": "+ 更多数据源即将推出"
+      "eyebrow": "平台覆盖",
+      "title": "您的受众使用的每个平台",
+      "subtitle": "无论在哪里—社交网络、新闻网站还是小众论坛—都能监控对话。",
+      "comingSoon": "即将推出",
+      "more": "+ 持续添加更多源"
+    },
+    "comparison": {
+      "eyebrow": "为何选择 BraneIQ",
+      "title": "不只是另一个监控工具",
+      "subtitle": "BraneIQ 从零开始构建，旨在弥补传统社交监听工具的不足。",
+      "featureCol": "功能",
+      "traditionalCol": "传统工具",
+      "braneiqCol": "BraneIQ",
+      "features": {
+        "ai": "AI 驱动洞察",
+        "realtime": "实时监控",
+        "moderation": "垃圾信息和评论审核",
+        "interface": "现代界面",
+        "multiplatform": "多平台情报",
+        "executive": "高管声誉监控",
+        "crisis": "危机检测与升级",
+        "deployment": "快速部署",
+        "security": "企业级安全"
+      }
     },
     "trust": {
+      "eyebrow": "Enterprise Ready",
       "title": "从第一天起即企业级就绪",
+      "subtitle": "安全性、可靠性和可扩展性融入平台的每一层。",
       "security": {
         "title": "基于角色的访问与审计日志",
         "body": "通过细粒度权限和活动记录，控制工作空间内的可见范围。"
@@ -241,6 +245,18 @@
       "realtime": {
         "title": "实时管道",
         "body": "基于现代事件驱动架构，实现亚分钟级摄取与警报投递。"
+      },
+      "gdpr": {
+        "title": "符合 GDPR",
+        "body": "以隐私法规为核心设计的数据处理实践。合规的数据处理和保留策略。"
+      },
+      "uptime": {
+        "title": "99.9% 可用性 SLA",
+        "body": "具备冗余和监控的生产级基础设施，全天候保障您的情报运作。"
+      },
+      "cloud": {
+        "title": "云基础设施",
+        "body": "随团队扩展的弹性架构 — 从单一品牌到数百个客户和市场。"
       }
     },
     "faq": {

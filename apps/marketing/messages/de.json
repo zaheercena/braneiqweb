@@ -81,53 +81,35 @@
       "title": "Vertraut von Kommunikations- und Marketing-Teams weltweit"
     },
     "stats": {
-      "sources": { "value": "10+", "label": "Datenquellen" },
-      "languages": { "value": "5", "label": "Unterstützte Sprachen" },
-      "latency": { "value": "<1 Min.", "label": "Alarm-Latenz" },
-      "uptime": { "value": "99,9 %", "label": "Plattform-Verfügbarkeit" }
+      "posts": { "value": "25M+", "label": "Analysierte Beiträge" },
+      "sources": { "value": "100+", "label": "Unterstützte Quellen" },
+      "uptime": { "value": "99,9 %", "label": "Plattformverfügbarkeit" },
+      "monitoring": { "value": "24/7", "label": "Echtzeitüberwachung" }
+    },
+    "valueProps": {
+      "eyebrow": "Warum BraneIQ",
+      "title": "Schützen Sie Ihre Reputation. Verstehen Sie Ihren Markt. Handeln Sie vor Ihren Wettbewerbern.",
+      "subtitle": "Jede Funktion verfolgt ein Ziel: Ihrem Team die Intelligenz zu geben, die für selbstsichere Entscheidungen benötigt wird.",
+      "crisis": { "title": "Reputationskrisen frühzeitig erkennen", "body": "Werden Sie alarmiert, sobald die Stimmung kippt oder Erwähnungen steigen — Stunden bevor eine Krise die Medien erreicht." },
+      "spam": { "title": "Spam stoppen bevor Kunden ihn sehen", "body": "KI entfernt automatisch toxische Kommentare, Spam und Konkurrenzangriffe aus Ihren Anzeigen und Beiträgen." },
+      "competitors": { "title": "Wettbewerber in Echtzeit verfolgen", "body": "Kampagnen, Produktlaunches und Stimmung der Konkurrenz im Blick behalten, um Lücken und Chancen zu erkennen." },
+      "campaigns": { "title": "Kampagnenleistung messen", "body": "Markenbekanntheit, Share of Voice und Stimmung kanalweit für jede Kampagne quantifizieren." },
+      "sentiment": { "title": "Kundenstimmung verstehen", "body": "Über Likes hinaus. Verstehen, was Kunden wirklich über Ihre Marke, Produkte und Services denken." },
+      "executive": { "title": "Führungsreputation überwachen", "body": "Erwähnungen, Stimmung und Narrative rund um Schlüsselpersonen verfolgen, um die Führungsreputation zu schützen." }
     },
     "solutions": {
-      "eyebrow": "Lösungen",
-      "title": "Eine Plattform für Listening, Analyse und Handlung",
-      "subtitle": "BraneIQ vereint Monitoring, Sentiment und Workflows in einer Plattform — speziell entwickelt für Teams, die Geschwindigkeit und Klarheit brauchen.",
+      "eyebrow": "Produktökosystem",
+      "title": "Eine Plattform. Acht leistungsstarke Produkte.",
+      "subtitle": "BraneIQ ist kein Einzeltool — es ist eine vollständige Intelligenzplattform mit spezialisierten Produkten für jeden Bedarf.",
       "products": {
-        "listen": {
-          "name": "BraneIQ Listen",
-          "body": "Social Listening und Markenintelligenz auf insights.braneiq.com — Mentions überwachen, Sentiment verfolgen und Insights kanalübergreifend nutzen.",
-          "cta": "insights.braneiq.com öffnen"
-        },
-        "moderator": {
-          "name": "BraneIQ Moderator",
-          "body": "KI-gestützte Kommentar-Moderation auf moderator.braneiq.com — Facebook- und Instagram-Ads und organische Posts vor Spam und Missbrauch schützen.",
-          "cta": "moderator.braneiq.com öffnen"
-        }
-      },
-      "listening": {
-        "title": "Social Listening",
-        "body": "Verfolgen Sie Marken, Keywords und Wettbewerber über Social-Kanäle hinweg mit flexiblen Abfragen und Echtzeit-Feeds.",
-        "points": {
-          "1": "Keyword- und Boolean-Abfrage-Builder",
-          "2": "Multi-Marken- und Multi-Client-Workspaces",
-          "3": "Einheitliche Timeline über alle Quellen"
-        }
-      },
-      "sentiment": {
-        "title": "Sentiment & Analysen",
-        "body": "Verstehen Sie Tonalität, Volumen und Share of Voice mit Dashboards für Analysten und Führungskräfte.",
-        "points": {
-          "1": "KI-gestützte Sentiment-Bewertung",
-          "2": "Trend- und Spike-Erkennung",
-          "3": "Exportfertige Executive-Reports"
-        }
-      },
-      "crisis": {
-        "title": "Krisen & Reputation",
-        "body": "Erkennen Sie Reputationsrisiken frühzeitig mit intelligenten Alarmen, Eskalationspfaden und Team-Workflows.",
-        "points": {
-          "1": "Schwellenwert- und Anomalie-Alarme",
-          "2": "Fälle zuweisen, kommentieren und lösen",
-          "3": "Audit-Trail für Compliance-Teams"
-        }
+        "socialListening": { "name": "Social Listening", "body": "Markenerwähnungen, Keywords und Wettbewerber auf allen Social-Plattformen in Echtzeit überwachen." },
+        "commentModerator": { "name": "Kommentar-Moderator", "body": "Spam, toxische Kommentare und Konkurrenzangriffe automatisch von Facebook und Instagram entfernen." },
+        "youtubeModeration": { "name": "YouTube-Moderator", "body": "YouTube-Kanal vor schädlichen Kommentaren mit KI-Moderation nach Ihren Markenregeln schützen." },
+        "newsMonitoring": { "name": "News Intelligence", "body": "Markenberichterstattung über Tausende von Nachrichtenquellen, Blogs und RSS-Feeds weltweit verfolgen." },
+        "crisisMonitoring": { "name": "Krisenzentrum", "body": "Sofortige Benachrichtigung bei Reputationsrisiken mit Eskalations-Workflows und Kollaborationstools." },
+        "competitorIntelligence": { "name": "Wettbewerbsintelligenz", "body": "Marke mit Wettbewerbern vergleichen: Share of Voice, Sentiment und Kampagnenverfolgung." },
+        "aiReporting": { "name": "KI-Berichte", "body": "Executive-taugliche Intelligenzberichte in Minuten mit KI-gestützter Analyse generieren." },
+        "executiveDashboards": { "name": "Führungsüberwachung", "body": "Führungsreputation und Sichtbarkeit in Medien und sozialen Plattformen verfolgen." }
       }
     },
     "howItWorks": {
@@ -223,13 +205,35 @@
       }
     },
     "integrations": {
-      "eyebrow": "Datenquellen",
-      "title": "Verbinden Sie die Kanäle, die zählen",
-      "subtitle": "Erfassen Sie Erwähnungen aus Social-Media-Plattformen und Nachrichtenquellen — mit regelmäßig neuen Connectors.",
-      "more": "+ weitere Quellen folgen"
+      "eyebrow": "Plattformabdeckung",
+      "title": "Jede Plattform, die Ihr Publikum nutzt",
+      "subtitle": "Konversationen überwachen, wo immer sie stattfinden — von sozialen Netzwerken bis zu Nachrichtenseiten und Nischen-Foren.",
+      "comingSoon": "Demnächst",
+      "more": "+ weitere Quellen werden regelmäßig hinzugefügt"
+    },
+    "comparison": {
+      "eyebrow": "Warum BraneIQ",
+      "title": "Nicht nur ein weiteres Überwachungstool",
+      "subtitle": "BraneIQ wurde von Grund auf entwickelt, um die Lücken traditioneller Social-Listening-Tools zu schließen.",
+      "featureCol": "Fähigkeit",
+      "traditionalCol": "Traditionelle Tools",
+      "braneiqCol": "BraneIQ",
+      "features": {
+        "ai": "KI-gestützte Insights",
+        "realtime": "Echtzeitüberwachung",
+        "moderation": "Spam- & Kommentarmoderation",
+        "interface": "Moderne Oberfläche",
+        "multiplatform": "Multi-Plattform-Intelligenz",
+        "executive": "Führungsreputationüberwachung",
+        "crisis": "Krisenerkennung & Eskalation",
+        "deployment": "Schnelle Bereitstellung",
+        "security": "Enterprise-Sicherheit"
+      }
     },
     "trust": {
+      "eyebrow": "Enterprise Ready",
       "title": "Enterprise-ready ab Tag eins",
+      "subtitle": "Sicherheit, Zuverlässigkeit und Skalierbarkeit in jede Schicht der Plattform integriert.",
       "security": {
         "title": "Rollenbasierter Zugriff & Audit-Logs",
         "body": "Steuern Sie, wer was in Workspaces sieht — mit granularen Berechtigungen und Aktivitätsprotokollen."
@@ -241,6 +245,18 @@
       "realtime": {
         "title": "Echtzeit-Pipeline",
         "body": "Auf moderner ereignisgesteuerter Architektur für Ingestion und Alarmzustellung in unter einer Minute."
+      },
+      "gdpr": {
+        "title": "DSGVO-konform",
+        "body": "Datenverarbeitungspraktiken mit Blick auf Datenschutzvorschriften. Konforme Verarbeitungs- und Aufbewahrungsrichtlinien."
+      },
+      "uptime": {
+        "title": "99,9% Uptime SLA",
+        "body": "Produktionsreife Infrastruktur mit Redundanz und Monitoring für unterbrechungsfreie Intelligenz rund um die Uhr."
+      },
+      "cloud": {
+        "title": "Cloud-Infrastruktur",
+        "body": "Skalierbare Architektur, die mit Ihrem Team wächst — von einer Marke bis zu Hunderten von Kunden und Märkten."
       }
     },
     "faq": {

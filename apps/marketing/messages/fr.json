@@ -81,53 +81,35 @@
       "title": "Plébiscité par les équipes comms et marketing du monde entier"
     },
     "stats": {
-      "sources": { "value": "10+", "label": "Sources de données" },
-      "languages": { "value": "5", "label": "Langues prises en charge" },
-      "latency": { "value": "<1 min", "label": "Latence des alertes" },
-      "uptime": { "value": "99,9 %", "label": "Disponibilité de la plateforme" }
+      "posts": { "value": "25M+", "label": "Publications analysées" },
+      "sources": { "value": "100+", "label": "Sources prises en charge" },
+      "uptime": { "value": "99,9 %", "label": "Disponibilité de la plateforme" },
+      "monitoring": { "value": "24/7", "label": "Surveillance en temps réel" }
+    },
+    "valueProps": {
+      "eyebrow": "Pourquoi choisir BraneIQ",
+      "title": "Protégez votre réputation. Comprenez votre marché. Agissez avant vos concurrents.",
+      "subtitle": "Chaque fonctionnalité est conçue autour d'un seul objectif : donner à votre équipe l'intelligence nécessaire pour prendre des décisions en toute confiance.",
+      "crisis": { "title": "Détectez les crises réputationnelles tôt", "body": "Soyez alerté dès que le sentiment se dégrade ou que les volumes de mentions augmentent — des heures avant qu'une crise atteigne les médias." },
+      "spam": { "title": "Stoppez le spam avant que les clients le voient", "body": "L'IA supprime automatiquement les commentaires toxiques, le spam et les attaques concurrentes de vos publicités et publications sociales." },
+      "competitors": { "title": "Suivez vos concurrents en temps réel", "body": "Surveillez les campagnes, lancements de produits et sentiments publics des concurrents pour identifier les opportunités." },
+      "campaigns": { "title": "Mesurez les performances des campagnes", "body": "Quantifiez la notoriété, la part de voix et le sentiment sur chaque canal pour chaque campagne." },
+      "sentiment": { "title": "Comprenez le sentiment client", "body": "Au-delà des likes. Comprenez ce que les clients pensent vraiment de votre marque, produits et service." },
+      "executive": { "title": "Surveillez la réputation des dirigeants", "body": "Suivez les mentions, le sentiment et la narration autour des dirigeants clés pour protéger la réputation du leadership." }
     },
     "solutions": {
-      "eyebrow": "Solutions",
-      "title": "Une plateforme pour l'écoute, l'analyse et l'action",
-      "subtitle": "BraneIQ unifie veille, sentiment et workflows sur une seule plateforme — conçu pour les équipes qui ont besoin de rapidité et de clarté.",
+      "eyebrow": "Écosystème produit",
+      "title": "Une plateforme. Huit produits puissants.",
+      "subtitle": "BraneIQ n'est pas un simple outil — c'est une plateforme d'intelligence complète avec des produits spécialisés pour chaque besoin.",
       "products": {
-        "listen": {
-          "name": "BraneIQ Listen",
-          "body": "Social listening et intelligence de marque sur insights.braneiq.com — surveillez les mentions, le sentiment et agissez sur les insights multi-canaux.",
-          "cta": "Ouvrir insights.braneiq.com"
-        },
-        "moderator": {
-          "name": "BraneIQ Moderator",
-          "body": "Modération de commentaires par IA sur moderator.braneiq.com — protégez les publicités et publications Facebook et Instagram contre le spam et les abus.",
-          "cta": "Ouvrir moderator.braneiq.com"
-        }
-      },
-      "listening": {
-        "title": "Social listening",
-        "body": "Suivez les marques, mots-clés et concurrents sur les réseaux sociaux avec des requêtes flexibles et des flux en temps réel.",
-        "points": {
-          "1": "Constructeur de requêtes par mots-clés et booléennes",
-          "2": "Espaces multi-marques et multi-clients",
-          "3": "Timeline unifiée sur toutes les sources"
-        }
-      },
-      "sentiment": {
-        "title": "Sentiment et analytique",
-        "body": "Comprenez le ton, le volume et la part de voix avec des tableaux de bord conçus pour les analystes et les dirigeants.",
-        "points": {
-          "1": "Scoring de sentiment alimenté par l'IA",
-          "2": "Détection de tendances et de pics",
-          "3": "Rapports exécutifs prêts à l'export"
-        }
-      },
-      "crisis": {
-        "title": "Crise et réputation",
-        "body": "Détectez les risques réputationnels tôt grâce à des alertes intelligentes, des parcours d'escalade et des workflows d'équipe.",
-        "points": {
-          "1": "Alertes de seuil et d'anomalie",
-          "2": "Assigner, commenter et résoudre les cas",
-          "3": "Piste d'audit pour les équipes conformité"
-        }
+        "socialListening": { "name": "Social Listening", "body": "Surveillez les mentions de marque, mots-clés et concurrents sur toutes les plateformes sociales en temps réel." },
+        "commentModerator": { "name": "Modérateur de commentaires", "body": "Supprimez automatiquement le spam, les commentaires toxiques et les attaques concurrentes sur Facebook et Instagram." },
+        "youtubeModeration": { "name": "Modérateur YouTube", "body": "Protégez votre chaîne YouTube des commentaires nuisibles avec une modération IA formée sur vos règles de marque." },
+        "newsMonitoring": { "name": "Intelligence médias", "body": "Suivez la couverture de marque sur des milliers de sources d'actualités, blogs et flux RSS dans le monde entier." },
+        "crisisMonitoring": { "name": "Centre de crise", "body": "Recevez des alertes instantanées sur les risques réputationnels avec des workflows d'escalade et outils de collaboration." },
+        "competitorIntelligence": { "name": "Intelligence concurrentielle", "body": "Comparez votre marque aux concurrents avec la part de voix, le sentiment et le suivi des campagnes." },
+        "aiReporting": { "name": "Rapports IA", "body": "Générez des rapports d'intelligence prêts pour les dirigeants en quelques minutes grâce à l'analyse IA." },
+        "executiveDashboards": { "name": "Surveillance des dirigeants", "body": "Suivez la réputation et la visibilité des dirigeants dans les médias et sur les plateformes sociales." }
       }
     },
     "howItWorks": {
@@ -169,32 +151,16 @@
     },
     "industries": {
       "eyebrow": "Secteurs",
-      "title": "Conçu pour les équipes de tous les secteurs",
-      "subtitle": "Que vous dirigiez une agence, une marque globale ou une équipe comms agile — BraneIQ s'adapte à votre workflow.",
-      "agencies": {
-        "title": "Agences et cabinets de conseil",
-        "body": "Gérez plusieurs clients avec des espaces isolés, des rapports en marque blanche et un accès équipe basé sur les rôles.",
-        "stat": "40 %",
-        "statLabel": "Rapports clients plus rapides (moy. équipes pilotes)"
-      },
-      "enterprise": {
-        "title": "Comms enterprise et RP",
-        "body": "Surveillez la santé globale de la marque, suivez la visibilité des dirigeants et coordonnez la réponse de crise entre régions.",
-        "stat": "90 %",
-        "statLabel": "Réduction du temps de veille manuelle"
-      },
-      "retail": {
-        "title": "Retail et marques grand public",
-        "body": "Suivez les lancements produits, l'UGC et les campagnes concurrentes pour protéger la réputation et stimuler l'engagement.",
-        "stat": "3×",
-        "statLabel": "Détection d'incidents plus rapide vs. suivi manuel"
-      },
-      "sports": {
-        "title": "Sport et divertissement",
-        "body": "Capturez le sentiment des fans, la visibilité des sponsors et le buzz en temps réel lors d'événements et de jours de match.",
-        "stat": "15 %",
-        "statLabel": "Augmentation de la couverture des insights d'engagement"
-      }
+      "title": "Conçu pour chaque secteur soucieux de sa réputation",
+      "subtitle": "Du retail au secteur public, BraneIQ s'adapte aux besoins de surveillance de votre secteur.",
+      "retail": { "title": "Retail & E-commerce", "body": "Suivez les lancements produits, les avis clients et les campagnes concurrentes. Identifiez le sentiment négatif avant qu'il n'affecte les ventes." },
+      "banking": { "title": "Banque & Finance", "body": "Surveillez les actualités réglementaires, les plaintes clients et le sentiment de marché pour protéger la réputation institutionnelle." },
+      "government": { "title": "Gouvernement & Secteur public", "body": "Suivez l'opinion publique, les réactions aux politiques et les narratives de crise sur les actualités et réseaux sociaux." },
+      "telecom": { "title": "Télécommunications", "body": "Surveillez le sentiment lié aux pannes, les mouvements concurrents et les signaux de satisfaction client en temps réel." },
+      "healthcare": { "title": "Santé", "body": "Protégez la réputation institutionnelle, suivez le sentiment des patients et surveillez la désinformation sur les plateformes." },
+      "hospitality": { "title": "Hôtellerie & Voyages", "body": "Surveillez les avis clients, les destinations tendance et la réputation de marque sur les plateformes de réservation et les réseaux sociaux." },
+      "education": { "title": "Éducation", "body": "Suivez la réputation institutionnelle, le sentiment étudiant et la couverture médiatique pour les universités et académies." },
+      "agencies": { "title": "Agences & Cabinets RP", "body": "Gérez plusieurs clients depuis une seule plateforme. Produisez des rapports en marque blanche avec des espaces de travail isolés." }
     },
     "testimonials": {
       "eyebrow": "Témoignages clients",
@@ -223,13 +189,35 @@
       }
     },
     "integrations": {
-      "eyebrow": "Sources de données",
-      "title": "Connectez les canaux qui comptent",
-      "subtitle": "Ingérez les mentions depuis les plateformes sociales et les sources d'actualités — avec de nouveaux connecteurs régulièrement.",
-      "more": "+ d'autres sources à venir"
+      "eyebrow": "Couverture des plateformes",
+      "title": "Chaque plateforme que votre audience utilise",
+      "subtitle": "Surveillez les conversations où qu'elles se produisent — des réseaux sociaux aux sites d'actualités et forums de niche.",
+      "comingSoon": "Bientôt disponible",
+      "more": "+ d'autres sources ajoutées régulièrement"
+    },
+    "comparison": {
+      "eyebrow": "Pourquoi BraneIQ",
+      "title": "Pas juste un autre outil de surveillance",
+      "subtitle": "BraneIQ a été conçu pour combler les lacunes des outils traditionnels de social listening.",
+      "featureCol": "Capacité",
+      "traditionalCol": "Outils traditionnels",
+      "braneiqCol": "BraneIQ",
+      "features": {
+        "ai": "Insights alimentés par l'IA",
+        "realtime": "Surveillance en temps réel",
+        "moderation": "Modération spam et commentaires",
+        "interface": "Interface moderne",
+        "multiplatform": "Intelligence multi-plateformes",
+        "executive": "Surveillance de réputation des dirigeants",
+        "crisis": "Détection et escalade de crise",
+        "deployment": "Déploiement rapide",
+        "security": "Sécurité enterprise"
+      }
     },
     "trust": {
+      "eyebrow": "Enterprise Ready",
       "title": "Prêt pour l'enterprise dès le premier jour",
+      "subtitle": "Sécurité, fiabilité et scalabilité intégrées à chaque couche de la plateforme.",
       "security": {
         "title": "Accès basé sur les rôles et journaux d'audit",
         "body": "Contrôlez qui voit quoi dans les espaces de travail avec des permissions granulaires et des traces d'activité."
@@ -241,6 +229,18 @@
       "realtime": {
         "title": "Pipeline en temps réel",
         "body": "Construit sur une architecture événementielle moderne pour une ingestion et une livraison d'alertes en moins d'une minute."
+      },
+      "gdpr": {
+        "title": "Conforme RGPD",
+        "body": "Pratiques de gestion des données conçues avec les réglementations de confidentialité en tête. Politiques de traitement et de conservation conformes."
+      },
+      "uptime": {
+        "title": "SLA 99,9% de disponibilité",
+        "body": "Infrastructure de niveau production avec redondance et surveillance pour maintenir votre intelligence opérationnelle en permanence."
+      },
+      "cloud": {
+        "title": "Infrastructure cloud",
+        "body": "Architecture évolutive qui grandit avec votre équipe — d'une seule marque à des centaines de clients et marchés."
       }
     },
     "faq": {
