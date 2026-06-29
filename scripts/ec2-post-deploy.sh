@@ -45,20 +45,35 @@ sudo ln -sf /etc/nginx/sites-available/braneiq-web /etc/nginx/sites-enabled/bran
 sudo nginx -t
 sudo systemctl reload nginx
 
-sudo tee "$APP_DIR/.env" > /dev/null <<'ENV'
+sudo tee "$APP_DIR/.env" > /dev/null <<ENV
 NODE_ENV=production
 PORT=3000
 HOSTNAME=0.0.0.0
 NEXT_PUBLIC_SITE_URL=https://braneiq.com
 NEXT_PUBLIC_APP_URL=https://app.braneiq.com
 NEXT_PUBLIC_GTM_ID=GTM-5GWN244W
+SMTP_USER=${SMTP_USER}
+SMTP_PASS=${SMTP_PASS}
 ENV
 
 if pm2 list | grep -q "braneiq-web"; then
   pm2 delete braneiq-web
 fi
 
-pm2 start "$APP_DIR/apps/marketing/server.js" \
+# Locate server.js — Next.js standalone puts it at the standalone root
+if [ -f "$APP_DIR/server.js" ]; then
+  SERVER_JS="$APP_DIR/server.js"
+elif [ -f "$APP_DIR/apps/marketing/server.js" ]; then
+  SERVER_JS="$APP_DIR/apps/marketing/server.js"
+else
+  echo "ERROR: server.js not found. Contents of $APP_DIR:"
+  find "$APP_DIR" -name "server.js" | head -20
+  exit 1
+fi
+
+echo "Starting PM2 with: $SERVER_JS"
+
+pm2 start "$SERVER_JS" \
   --name braneiq-web \
   --cwd "$APP_DIR" \
   --update-env
