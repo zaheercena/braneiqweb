@@ -1,12 +1,12 @@
 {
   "metadata": {
     "siteName": "BraneIQ",
-    "defaultTitle": "BraneIQ | Social Listening & Brand Intelligence",
-    "defaultDescription": "Monitor brand mentions, analyze sentiment, and act on social insights. BraneIQ is the social listening platform for comms, PR, and marketing teams.",
-    "keywords": "social listening, brand monitoring, sentiment analysis, media intelligence, reputation management, social media analytics, BraneIQ",
+    "defaultTitle": "BraneIQ | AI-Powered Digital Intelligence Platform",
+    "defaultDescription": "Monitor brand mentions, detect reputation crises, analyze sentiment, and protect your digital presence across social media, news, and forums. BraneIQ is the intelligence platform for enterprise teams.",
+    "keywords": "social listening, brand monitoring, sentiment analysis, media intelligence, reputation management, social media analytics, comment moderation, crisis monitoring, competitor intelligence, BraneIQ",
     "home": {
-      "title": "Social Listening & Brand Intelligence Platform",
-      "description": "Turn social noise into brand intelligence. Monitor mentions, track sentiment, and respond faster with BraneIQ — built for comms and marketing teams."
+      "title": "AI-Powered Digital Intelligence Platform",
+      "description": "Know what the internet says about your brand before it becomes tomorrow's headline. Monitor millions of conversations across social media, news, and forums with AI that identifies risks, trends, and opportunities."
     },
     "platform": {
       "title": "Platform Overview",
@@ -61,72 +61,99 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Social listening platform",
-      "title": "Turn social noise into brand intelligence",
-      "subtitle": "Monitor mentions, track sentiment, and act on insights across social channels — in one unified workspace built for comms and marketing teams.",
-      "ctaPrimary": "Request a demo",
-      "ctaSecondary": "Explore platform",
+      "eyebrow": "Digital Intelligence Platform",
+      "title": "Know what the internet says about your brand — before it becomes tomorrow's headline.",
+      "subtitle": "Monitor millions of conversations across social media, news, blogs, forums, and video platforms in real time. AI identifies risks, trends, competitors, and opportunities before they impact your business.",
+      "ctaPrimary": "Book a Demo",
+      "ctaSecondary": "Watch Interactive Demo",
       "preview": {
         "mentions": "Mentions today",
         "vsLastWeek": "vs last week",
-        "sentiment": "Sentiment",
+        "sentiment": "Sentiment score",
         "positive": "Positive",
         "alerts": "Active alerts",
         "active": "Needs review",
-        "sample1": "Brand mention spike on X — 340 posts/hr",
-        "sample2": "Competitor campaign trending in DE"
+        "crisisRisk": "Crisis risk",
+        "crisisValue": "Low",
+        "sample1": "Reputation spike detected on X — 340 posts/hr",
+        "sample2": "Competitor campaign trending across 3 markets",
+        "sample3": "12 spam comments auto-moderated on FB ads"
       }
     },
     "trustedBy": {
       "title": "Trusted by comms and marketing teams worldwide"
     },
     "stats": {
-      "sources": { "value": "10+", "label": "Data sources" },
-      "languages": { "value": "5", "label": "Supported locales" },
-      "latency": { "value": "<1 min", "label": "Alert latency" },
-      "uptime": { "value": "99.9%", "label": "Platform uptime" }
+      "posts": { "value": "25M+", "label": "Posts Analyzed" },
+      "sources": { "value": "100+", "label": "Supported Sources" },
+      "uptime": { "value": "99.9%", "label": "Platform Availability" },
+      "monitoring": { "value": "24/7", "label": "Real-Time Monitoring" }
     },
-    "solutions": {
-      "eyebrow": "Solutions",
-      "title": "One platform for listening, analysis, and action",
-      "subtitle": "BraneIQ unifies monitoring, sentiment, and workflows in one platform — purpose-built for teams that need speed and clarity.",
-      "products": {
-        "listen": {
-          "name": "BraneIQ Listen",
-          "body": "Social listening and brand intelligence on insights.braneiq.com — monitor mentions, track sentiment, and act on insights across channels.",
-          "cta": "Open insights.braneiq.com"
-        },
-        "moderator": {
-          "name": "BraneIQ Moderator",
-          "body": "AI-powered comment moderation on moderator.braneiq.com — protect Facebook and Instagram ads and organic posts from spam and abuse.",
-          "cta": "Open moderator.braneiq.com"
-        }
+    "valueProps": {
+      "eyebrow": "Why Organizations Choose BraneIQ",
+      "title": "Protect your reputation. Understand your market. Act before competitors do.",
+      "subtitle": "Every feature is designed around one goal: giving your team the intelligence needed to make confident decisions.",
+      "crisis": {
+        "title": "Detect Reputation Crises Early",
+        "body": "Get alerted the moment sentiment shifts or mention volumes spike — hours before a crisis reaches mainstream media."
       },
-      "listening": {
-        "title": "Social listening",
-        "body": "Track brands, keywords, and competitors across social channels with flexible queries and real-time feeds.",
-        "points": {
-          "1": "Keyword and boolean query builder",
-          "2": "Multi-brand and multi-client workspaces",
-          "3": "Unified timeline across sources"
-        }
+      "spam": {
+        "title": "Stop Spam Before Customers See It",
+        "body": "AI automatically removes toxic comments, spam, and competitor attacks from your social ads and organic posts."
+      },
+      "competitors": {
+        "title": "Track Competitors in Real Time",
+        "body": "Monitor competitor campaigns, product launches, and public sentiment to identify gaps and opportunities."
+      },
+      "campaigns": {
+        "title": "Measure Campaign Performance",
+        "body": "Quantify brand awareness, share of voice, and audience sentiment across every channel for every campaign."
       },
       "sentiment": {
-        "title": "Sentiment & analytics",
-        "body": "Understand tone, volume, and share of voice with dashboards designed for analysts and executives.",
-        "points": {
-          "1": "AI-powered sentiment scoring",
-          "2": "Trend and spike detection",
-          "3": "Export-ready executive reports"
-        }
+        "title": "Understand Customer Sentiment",
+        "body": "Go beyond likes and shares. Understand what customers actually think about your brand, products, and service."
       },
-      "crisis": {
-        "title": "Crisis & reputation",
-        "body": "Catch reputation risks early with smart alerts, escalation paths, and team workflows.",
-        "points": {
-          "1": "Threshold and anomaly alerts",
-          "2": "Assign, comment, and resolve cases",
-          "3": "Audit trail for compliance teams"
+      "executive": {
+        "title": "Monitor Executive Reputation",
+        "body": "Track mentions, sentiment, and narrative around key executives to protect leadership reputation."
+      }
+    },
+    "solutions": {
+      "eyebrow": "Product Ecosystem",
+      "title": "One platform. Eight powerful products.",
+      "subtitle": "BraneIQ is not a single tool — it is a complete intelligence platform with specialized products for every need.",
+      "products": {
+        "socialListening": {
+          "name": "Social Listening",
+          "body": "Monitor brand mentions, keywords, and competitors across all major social platforms in real time."
+        },
+        "commentModerator": {
+          "name": "Comment Moderator",
+          "body": "Automatically remove spam, toxic comments, and competitor attacks from Facebook and Instagram."
+        },
+        "youtubeModeration": {
+          "name": "YouTube Moderator",
+          "body": "Protect your YouTube channel from harmful comments with AI moderation trained on your brand rules."
+        },
+        "newsMonitoring": {
+          "name": "News Intelligence",
+          "body": "Track brand coverage across thousands of news sources, blogs, and RSS feeds globally."
+        },
+        "crisisMonitoring": {
+          "name": "Crisis Center",
+          "body": "Get instant alerts on reputation risks with escalation workflows and team collaboration tools."
+        },
+        "competitorIntelligence": {
+          "name": "Competitor Intelligence",
+          "body": "Benchmark your brand against competitors with share of voice, sentiment, and campaign tracking."
+        },
+        "aiReporting": {
+          "name": "AI Reports",
+          "body": "Generate executive-ready intelligence reports in minutes using AI-powered analysis."
+        },
+        "executiveDashboards": {
+          "name": "Executive Monitoring",
+          "body": "Track leadership reputation and executive visibility across media and social platforms."
         }
       }
     },
@@ -169,31 +196,39 @@
     },
     "industries": {
       "eyebrow": "Industries",
-      "title": "Built for teams across every sector",
-      "subtitle": "Whether you run an agency, a global brand, or a lean comms team — BraneIQ adapts to your workflow.",
-      "agencies": {
-        "title": "Agencies & consultancies",
-        "body": "Manage multiple clients with isolated workspaces, white-label reports, and role-based team access.",
-        "stat": "40%",
-        "statLabel": "Faster client reporting (avg. pilot teams)"
-      },
-      "enterprise": {
-        "title": "Enterprise comms & PR",
-        "body": "Monitor global brand health, track executive visibility, and coordinate crisis response across regions.",
-        "stat": "90%",
-        "statLabel": "Reduction in manual monitoring time"
-      },
+      "title": "Built for every sector that cares about reputation",
+      "subtitle": "From retail to government, BraneIQ adapts to the monitoring needs of your industry.",
       "retail": {
-        "title": "Retail & consumer brands",
-        "body": "Track product launches, UGC, and competitor campaigns to protect reputation and drive engagement.",
-        "stat": "3×",
-        "statLabel": "Faster issue detection vs. manual tracking"
+        "title": "Retail & E-commerce",
+        "body": "Track product launches, customer reviews, and competitor campaigns. Identify negative sentiment before it affects sales."
       },
-      "sports": {
-        "title": "Sports & entertainment",
-        "body": "Capture fan sentiment, sponsor visibility, and real-time buzz during events and match days.",
-        "stat": "15%",
-        "statLabel": "Increase in engagement insights coverage"
+      "banking": {
+        "title": "Banking & Finance",
+        "body": "Monitor regulatory news, customer complaints, and market sentiment to protect institutional reputation."
+      },
+      "government": {
+        "title": "Government & Public Sector",
+        "body": "Track public opinion, policy reactions, and crisis narratives across news and social platforms."
+      },
+      "telecom": {
+        "title": "Telecommunications",
+        "body": "Monitor service outage sentiment, competitor moves, and customer satisfaction signals in real time."
+      },
+      "healthcare": {
+        "title": "Healthcare",
+        "body": "Protect institutional reputation, track patient sentiment, and monitor misinformation across platforms."
+      },
+      "hospitality": {
+        "title": "Hospitality & Travel",
+        "body": "Monitor guest reviews, trending destinations, and brand reputation across booking platforms and social."
+      },
+      "education": {
+        "title": "Education",
+        "body": "Track institution reputation, student sentiment, and media coverage for universities and academies."
+      },
+      "agencies": {
+        "title": "Agencies & PR Firms",
+        "body": "Manage multiple clients from one platform. Deliver white-label reports with isolated workspaces."
       }
     },
     "testimonials": {
@@ -223,57 +258,100 @@
       }
     },
     "integrations": {
-      "eyebrow": "Data sources",
-      "title": "Connect the channels that matter",
-      "subtitle": "Ingest mentions from social platforms and news sources — with more connectors shipping regularly.",
-      "more": "+ more sources coming"
+      "eyebrow": "Platform Coverage",
+      "title": "Every platform your audience uses",
+      "subtitle": "Monitor conversations wherever they happen — from social networks to news sites to niche forums.",
+      "comingSoon": "Coming Soon",
+      "more": "+ more sources added regularly"
+    },
+    "comparison": {
+      "eyebrow": "Why BraneIQ",
+      "title": "Not just another monitoring tool",
+      "subtitle": "BraneIQ was built from the ground up to address the gaps that traditional social listening tools leave behind.",
+      "featureCol": "Capability",
+      "traditionalCol": "Traditional Tools",
+      "braneiqCol": "BraneIQ",
+      "features": {
+        "ai": "AI-Powered Insights",
+        "realtime": "Real-Time Monitoring",
+        "moderation": "Spam & Comment Moderation",
+        "interface": "Modern Interface",
+        "multiplatform": "Multi-Platform Intelligence",
+        "executive": "Executive Reputation Monitoring",
+        "crisis": "Crisis Detection & Escalation",
+        "deployment": "Fast Deployment",
+        "security": "Enterprise Security"
+      }
     },
     "trust": {
-      "title": "Enterprise-ready from day one",
+      "eyebrow": "Enterprise Ready",
+      "title": "Built for the demands of enterprise organizations",
+      "subtitle": "Security, reliability, and scalability built into every layer of the platform.",
       "security": {
-        "title": "Role-based access & audit logs",
-        "body": "Control who sees what across workspaces with granular permissions and activity trails."
+        "title": "Role-Based Access & Audit Logs",
+        "body": "Control who sees what across workspaces with granular permissions and complete activity trails for compliance."
       },
       "multiTenant": {
-        "title": "Multi-tenant isolation",
-        "body": "Agency and enterprise clients stay fully separated — data, users, and configs per tenant."
+        "title": "Multi-Tenant Isolation",
+        "body": "Agency and enterprise clients stay fully separated — data, users, and configurations are isolated per tenant."
       },
       "realtime": {
-        "title": "Real-time pipeline",
-        "body": "Built on a modern event-driven architecture for sub-minute ingestion and alert delivery."
+        "title": "Real-Time Pipeline",
+        "body": "Built on a modern event-driven architecture for sub-minute data ingestion and instant alert delivery."
+      },
+      "gdpr": {
+        "title": "GDPR Ready",
+        "body": "Data handling practices designed with privacy regulations in mind. Compliant data processing and retention policies."
+      },
+      "uptime": {
+        "title": "99.9% Uptime SLA",
+        "body": "Production-grade infrastructure with redundancy and monitoring to keep your intelligence flowing around the clock."
+      },
+      "cloud": {
+        "title": "Cloud Infrastructure",
+        "body": "Scalable architecture that grows with your team — from a single brand to hundreds of clients and markets."
       }
     },
     "faq": {
       "eyebrow": "FAQ",
       "title": "Frequently asked questions",
-      "subtitle": "Quick answers about BraneIQ, our data sources, and how to get started.",
+      "subtitle": "Everything you need to know about BraneIQ's platform, coverage, and getting started.",
       "items": {
         "what": {
           "q": "What is BraneIQ?",
-          "a": "BraneIQ is a social listening and brand intelligence platform. It helps comms, PR, and marketing teams monitor mentions, analyze sentiment, and respond to reputation risks across social channels."
+          "a": "BraneIQ is an AI-powered Digital Intelligence Platform. It helps organizations monitor, analyze, and protect their digital presence across social media, news, blogs, forums, and video platforms. It includes Social Listening, Comment Moderation, News Intelligence, Competitor Tracking, Crisis Monitoring, and Executive Dashboards."
         },
         "sources": {
-          "q": "Which data sources do you support?",
-          "a": "BraneIQ currently supports X (Twitter), Reddit, Facebook, YouTube, and news/RSS feeds — with additional connectors on our roadmap. Contact us for specific source requirements."
+          "q": "Which platforms and data sources do you support?",
+          "a": "BraneIQ monitors Facebook, Instagram, YouTube, X (Twitter), Reddit, news websites, blogs, forums, and RSS feeds. TikTok and LinkedIn integrations are on the roadmap. Contact us for specific source requirements."
         },
         "teams": {
-          "q": "Can agencies manage multiple clients?",
-          "a": "Yes. BraneIQ is built for agencies with multi-client workspaces, role-based access, and isolated data per tenant. Each client gets their own brands, keywords, and reports."
+          "q": "Can agencies manage multiple clients from one account?",
+          "a": "Yes. BraneIQ is built for agencies with fully isolated multi-client workspaces, role-based access control, and white-label reporting. Each client gets their own brands, keywords, dashboards, and data — completely separated."
+        },
+        "crisis": {
+          "q": "How does crisis detection work?",
+          "a": "BraneIQ continuously monitors mention volume and sentiment. When an anomaly or threshold breach is detected, the Crisis Center sends instant alerts with escalation workflows so your team can respond within minutes, not hours."
+        },
+        "moderation": {
+          "q": "How does comment moderation work?",
+          "a": "The Comment Moderator uses AI trained on your brand's specific rules to automatically hide or delete spam, toxic comments, and competitor attacks from Facebook and Instagram ads and organic posts — 24/7, without manual review."
         },
         "pricing": {
           "q": "How does pricing work?",
-          "a": "We offer flexible plans based on workspace size, data volume, and team seats. Request a demo and we'll recommend a plan tailored to your needs."
+          "a": "We offer flexible plans based on the number of monitored brands, data volume, and team seats. Request a demo and our team will recommend the right plan for your needs and budget."
         },
         "demo": {
-          "q": "How do I get started?",
-          "a": "Request a demo and our team will walk you through the platform, help configure your first brands and keywords, and discuss onboarding timelines."
+          "q": "How quickly can we get started?",
+          "a": "Most teams are up and running within a few days. Book a demo and our team will walk you through setup, configure your first brands and keywords, and have you monitoring live data within 48 hours."
         }
       }
     },
     "cta": {
-      "title": "Ready to see BraneIQ in action?",
-      "subtitle": "Book a personalized demo and learn how teams use BraneIQ to protect and grow their brands.",
-      "button": "Schedule your demo"
+      "title": "Protect Your Brand Before the Next Crisis.",
+      "subtitle": "Thousands of conversations about your brand are happening right now. Make sure you're the first to know.",
+      "button": "Book a Demo",
+      "buttonSecondary": "Schedule a Consultation"
     }
   },
   "platform": {
