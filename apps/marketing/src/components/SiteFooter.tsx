@@ -14,7 +14,9 @@ export async function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-4">
         <div className="md:col-span-1">
           <div className="flex items-center gap-2">
-            <Image src="/braneiq.png" alt="BraneIQ" width={36} height={36} className="object-contain brightness-0 invert" />
+            <div className="rounded-lg bg-white p-1">
+              <Image src="/braneiq.png" alt="BraneIQ" width={32} height={32} className="object-contain" />
+            </div>
             <p className="text-lg font-bold text-white">Brane<span className="text-indigo-400">IQ</span></p>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-slate-400">{t('tagline')}</p>
