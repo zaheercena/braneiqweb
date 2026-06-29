@@ -338,7 +338,7 @@
       },
       "contact": {
         "title": "联系我们",
-        "body": "如有隐私相关问题，请联系 privacy@braneiq.com 或 BraneIQ 的运营方 Cozmot Inc。"
+        "body": "如有隐私相关问题，请联系 support@braneiq.com 或 BraneIQ 的运营方 Cozmot Inc。"
       }
     }
   },
@@ -357,7 +357,7 @@
       },
       "accounts": {
         "title": "账户与安全",
-        "body": "您须提供准确的注册信息并保密登录凭据。您对账户下的所有活动负责。如发现未经授权的访问，请立即联系 hello@braneiq.com。我们可因违反本条款或存在安全风险而暂停或终止账户。"
+        "body": "您须提供准确的注册信息并保密登录凭据。您对账户下的所有活动负责。如发现未经授权的访问，请立即联系 support@braneiq.com。我们可因违反本条款或存在安全风险而暂停或终止账户。"
       },
       "acceptableUse": {
         "title": "可接受使用",
@@ -393,7 +393,7 @@
       },
       "contact": {
         "title": "联系我们",
-        "body": "有关本条款的问题请发送至 hello@braneiq.com。BraneIQ 由 Cozmot Inc 运营。"
+        "body": "有关本条款的问题请发送至 support@braneiq.com。BraneIQ 由 Cozmot Inc 运营。"
       }
     }
   }

@@ -338,7 +338,7 @@
       },
       "contact": {
         "title": "Nous contacter",
-        "body": "Pour toute question relative à la confidentialité, contactez privacy@braneiq.com ou Cozmot Inc, l'exploitant de BraneIQ."
+        "body": "Pour toute question relative à la confidentialité, contactez support@braneiq.com ou Cozmot Inc, l'exploitant de BraneIQ."
       }
     }
   },
@@ -357,7 +357,7 @@
       },
       "accounts": {
         "title": "Comptes et sécurité",
-        "body": "Vous devez fournir des informations d'inscription exactes et garder vos identifiants confidentiels. Vous êtes responsable de toute activité sous votre compte. Informez-nous rapidement à hello@braneiq.com de tout accès non autorisé. Nous pouvons suspendre ou résilier les comptes en cas de violation de ces Conditions ou de risque de sécurité."
+        "body": "Vous devez fournir des informations d'inscription exactes et garder vos identifiants confidentiels. Vous êtes responsable de toute activité sous votre compte. Informez-nous rapidement à support@braneiq.com de tout accès non autorisé. Nous pouvons suspendre ou résilier les comptes en cas de violation de ces Conditions ou de risque de sécurité."
       },
       "acceptableUse": {
         "title": "Utilisation acceptable",
@@ -393,7 +393,7 @@
       },
       "contact": {
         "title": "Nous contacter",
-        "body": "Pour toute question concernant ces Conditions, contactez hello@braneiq.com. BraneIQ est exploité par Cozmot Inc."
+        "body": "Pour toute question concernant ces Conditions, contactez support@braneiq.com. BraneIQ est exploité par Cozmot Inc."
       }
     }
   }

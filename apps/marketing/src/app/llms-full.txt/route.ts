@@ -89,8 +89,8 @@ Request a demo at ${siteUrl}/en/request-demo
 
 - Product name: BraneIQ
 - Operator: Cozmot Inc
-- Contact: hello@braneiq.com
-- Privacy: privacy@braneiq.com
+- Contact: support@braneiq.com
+- Privacy: support@braneiq.com
 
 ## Technical notes for crawlers
 

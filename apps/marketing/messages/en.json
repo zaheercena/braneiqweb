@@ -416,7 +416,7 @@
       },
       "contact": {
         "title": "Contact us",
-        "body": "For privacy questions, contact privacy@braneiq.com or Cozmot Inc, the operator of BraneIQ."
+        "body": "For privacy questions, contact support@braneiq.com or Cozmot Inc, the operator of BraneIQ."
       }
     }
   },
@@ -435,7 +435,7 @@
       },
       "accounts": {
         "title": "Accounts and security",
-        "body": "You must provide accurate registration information and keep your credentials confidential. You are responsible for all activity under your account. Notify us promptly at hello@braneiq.com of any unauthorized access. We may suspend or terminate accounts that violate these Terms or pose a security risk."
+        "body": "You must provide accurate registration information and keep your credentials confidential. You are responsible for all activity under your account. Notify us promptly at support@braneiq.com of any unauthorized access. We may suspend or terminate accounts that violate these Terms or pose a security risk."
       },
       "acceptableUse": {
         "title": "Acceptable use",
@@ -471,7 +471,7 @@
       },
       "contact": {
         "title": "Contact us",
-        "body": "Questions about these Terms may be sent to hello@braneiq.com. BraneIQ is operated by Cozmot Inc."
+        "body": "Questions about these Terms may be sent to support@braneiq.com. BraneIQ is operated by Cozmot Inc."
       }
     }
   }

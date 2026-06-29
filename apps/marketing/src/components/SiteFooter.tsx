@@ -94,8 +94,8 @@ export async function SiteFooter() {
           </p>
           <ul className="mt-4 space-y-2 text-sm">
             <li>
-              <a href="mailto:hello@braneiq.com" className="hover:text-white">
-                hello@braneiq.com
+              <a href="mailto:support@braneiq.com" className="hover:text-white">
+                support@braneiq.com
               </a>
             </li>
             <li>
